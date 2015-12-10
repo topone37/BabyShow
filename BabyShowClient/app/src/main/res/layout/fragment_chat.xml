@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/color_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="聊天"
+            android:textColor="#FFF"
+            android:textSize="@dimen/title_textsize" />
+
+
+        <TextView
+            android:id="@+id/tv_add_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sel_btn_back_style"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="添加"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <!--为了应付 所以这里单选按钮暂不处理-->
+        <RadioGroup
+            android:id="@+id/rg_chat"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rb_chat_huihua"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_rg_huihua"
+                android:button="@null"
+                android:padding="5dp"
+                android:text="会话"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/rb_chat_friend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_rg_friend"
+                android:button="@null"
+                android:padding="5dp"
+                android:text="好友" />
+        </RadioGroup>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/color_line" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_search_title"
+        android:background="#5f5f5f"
+        android:paddingBottom="9dp"
+        android:paddingLeft="11.5dp"
+        android:paddingRight="11.5dp"
+        android:paddingTop="9dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/cor_search"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="17dp"
+                android:src="@drawable/search" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#BDBDBD"
+                android:hint="搜索好友"
+                android:textCursorDrawable="@null"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</LinearLayout>
