@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\BabyShowClient\IMKit\src\main\assets"/></dataSet><dataSet config="debug"><source path="F:\BabyShowClient\IMKit\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="F:\BabyShow\BabyShowClient\IMKit\src\main\assets"/></dataSet><dataSet config="debug"><source path="F:\BabyShow\BabyShowClient\IMKit\src\debug\assets"/></dataSet></merger>

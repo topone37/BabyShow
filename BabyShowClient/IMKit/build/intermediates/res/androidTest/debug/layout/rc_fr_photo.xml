@@ -22,4 +22,4 @@
         android:textColor="@android:color/white"
         android:layout_gravity="center"
         android:visibility="gone"/>
-</FrameLayout><!-- From: file:/F:/BabyShowClient/IMKit/src/main/res/layout/rc_fr_photo.xml --><!-- From: file:/F:/BabyShowClient/IMKit/build/intermediates/bundles/debug/res/layout/rc_fr_photo.xml -->
+</FrameLayout><!-- From: file:/F:/BabyShow/BabyShowClient/IMKit/src/main/res/layout/rc_fr_photo.xml --><!-- From: file:/F:/BabyShow/BabyShowClient/IMKit/build/intermediates/bundles/debug/res/layout/rc_fr_photo.xml -->

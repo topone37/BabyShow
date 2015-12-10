@@ -60,4 +60,4 @@
         android:src="@drawable/rc_ic_message_block"
         android:visibility="gone"/>
 
-</RelativeLayout><!-- From: file:/F:/BabyShowClient/IMKit/src/main/res/layout/rc_item_public_service_conversation.xml -->
+</RelativeLayout><!-- From: file:/F:/BabyShow/BabyShowClient/IMKit/src/main/res/layout/rc_item_public_service_conversation.xml -->
