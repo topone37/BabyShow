@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Listener className="org.apache.catalina.startup.TldConfig"/>
+	<Listener className="org.apache.catalina.startup.TldConfig"/>
+	<Listener className="org.apache.catalina.startup.TldConfig"/>
+	<Listener className="org.apache.catalina.startup.TldConfig"/>
+	<Resource
+			auth="Container"
+			description="baby"
+			name="jdbc/baby"
+			password="root"
+			username="root"
+			type="javax.sql.DataSource"
+			driverClassName="com.mysql.jdbc.Driver"
+			url="jdbc:mysql://localhost:3306/baby?characterEncoding=UTF-8"/>
+</Context>
