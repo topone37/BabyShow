@@ -35,7 +35,6 @@ public class NewsAdapter extends BaseAdapter {
     }
 
     public void removeAll() {
-        Log.v("tp", "清空适配器");
         //将适配器中的数据清空
         data.clear();
         notifyDataSetChanged();
