@@ -22,20 +22,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0691c01b-e10e-4b18-b083-4fd5d000b326" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/util/ConvertTime.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/util/ConvertTime.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/util/ConvertTime.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/util/ConvertTime.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/.idea/misc.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/adapter/NewsAdapter.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/adapter/NewsAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/util/UrlConst.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/util/UrlConst.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/view/CircleImageView.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/view/CircleImageView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/fragment_news.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/fragment_news.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/list_item_news.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/list_item_news.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/util/ConvertTime.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/util/ConvertTime.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/20151129_06352600.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/20151203_221608.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/20151204_002546.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/20151204_004030.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/20151204_005152.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/20151204_005521.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/20151204_005538.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/20151204_010943.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/20151204_011827.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/h2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/home.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/photo/setting.png" afterPath="" />
     </list>
     <ignored path="毕设工作空间.iws" />
     <ignored path=".idea/workspace.xml" />
