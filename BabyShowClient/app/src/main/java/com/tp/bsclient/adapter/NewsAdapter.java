@@ -25,10 +25,12 @@ public class NewsAdapter extends BaseAdapter {
 
     private Context context;
     private List<News> data;
+    private int mScreenWidth;
 
     public NewsAdapter(Context context, List<News> data) {
         this.context = context;
         this.data = data;
+        mScreenWidth = this.context.getResources().getDisplayMetrics().widthPixels - 30;
 
     }
 
@@ -121,8 +123,14 @@ public class NewsAdapter extends BaseAdapter {
         if (news.getDate() != null && !news.getDate().equals("")) {
             holder.date.setText(news.getDate()); //动态日期
         } else {
-            holder.date.setText("2015-12-23 14:57"); //动态日期
+            holder.date.setText("11-23"); //动态日期
         }
+        ViewGroup.LayoutParams params = holder.img1.getLayoutParams();
+        params.width = mScreenWidth / 3;
+        params.height = (int) (mScreenWidth / 3 / 0.9);
+        holder.img1.setLayoutParams(params);
+        holder.img2.setLayoutParams(params);
+        holder.img3.setLayoutParams(params);
         //有图片
         List<String> imgs = news.getImgs();//获取对应图片
         if (imgs == null || imgs.size() == 0) {
@@ -130,6 +138,8 @@ public class NewsAdapter extends BaseAdapter {
             holder.img2.setVisibility(View.GONE);
             holder.img3.setVisibility(View.GONE);
         } else if (imgs.size() == 1) {
+            //只有一张图 图片大小 放大点
+
             holder.img1.setVisibility(View.VISIBLE);
             holder.img2.setVisibility(View.GONE);
             holder.img3.setVisibility(View.GONE);

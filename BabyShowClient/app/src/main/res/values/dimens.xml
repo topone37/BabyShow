@@ -7,7 +7,7 @@
     <dimen name="gap_big">20dp</dimen>
     <dimen name="gap_huge">40dp</dimen>
     <dimen name="line_height">0.5dp</dimen>
-    <dimen name="title_height">48dp</dimen>
+    <dimen name="title_height">45dp</dimen>
     <dimen name="content_textsize">14dp</dimen>
     <dimen name="title_textsize">22dp</dimen>
     <dimen name="edit_height">50dp</dimen>

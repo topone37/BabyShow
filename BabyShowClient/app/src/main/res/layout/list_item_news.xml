@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/line_height"
-        android:background="@color/color_line" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,10 +10,6 @@
         android:background="@color/color_bg"
         android:orientation="horizontal">
 
-        <View
-            android:layout_width="@dimen/line_height"
-            android:layout_height="match_parent"
-            android:background="@color/color_line" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,14 +19,15 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="45dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp">
 
                 <com.tp.bsclient.view.CircleImageView
                     android:id="@+id/head"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
                     android:paddingLeft="8dp"
                     android:paddingTop="8dp"
                     android:src="@drawable/head01" />
@@ -52,36 +43,44 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
                     android:layout_toRightOf="@+id/head"
                     android:text="千山暮雪兔"
-                    android:textColor="@color/color_black" />
+                    android:textColor="#17201D"
+                    android:textSize="11sp" />
 
                 <TextView
                     android:id="@+id/intro"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_below="@+id/nickname"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
                     android:layout_toRightOf="@+id/head"
-                    android:gravity="bottom"
-                    android:paddingBottom="5dp"
-                    android:text="分享各种新鲜笑料。猛点收听，欢乐随行!" />
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|left"
+                    android:maxLines="1"
+                    android:text="分享各种新鲜笑料。猛点收听，欢乐随行!分享各种新鲜笑料。猛点收听，欢乐随行!分享各种新鲜笑料。猛点收听，欢乐随行!"
+                    android:textSize="10sp" />
 
                 <TextView
                     android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="8dp"
-                    android:text="2013/11/12"
-                    android:textColor="@color/color_black" />
+                    android:layout_marginRight="9dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="2013-11-12"
+                    android:textSize="10sp" />
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:orientation="vertical">
 
 
@@ -89,13 +88,12 @@
                     android:id="@+id/content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:ellipsize="end"
-                    android:lineSpacingExtra="5dp"
-                    android:maxLines="3"
+                    android:lineSpacingExtra="6dp"
+                    android:maxLines="4"
                     android:text="这世上不需要付出就能得到的美好事物毕竟太少，即时是日出都需要牺牲睡眠。想要好身体就得保持锻炼，想要过的好，就得努力，不管你去哪里，愿你不忘初心"
-                    android:textColor="@color/color_black"
-                    android:textSize="@dimen/content_textsize" />
+                    android:textColor="#17201D"
+                    android:textSize="12sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -132,8 +130,14 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/img03" />
                 </LinearLayout>
-            </LinearLayout>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="来自宝宝秀"
+                    android:textSize="8sp" />
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -142,6 +146,6 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/line_height"
-        android:background="@color/color_line" />
+        android:layout_height="6dp"
+        android:background="#0F000000" />
 </LinearLayout>

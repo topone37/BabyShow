@@ -9,8 +9,10 @@ public class ConvertTime {
             return datetime;
         } else {
             String t[] = datetime.split(" "); //  2015-11-23
-            String time = t[1].substring(0, 5); //  12:34
-            return t[0] + "  " + time;
+            t[0] = t[0].substring(5);
+//            String time = t[1].substring(0, 5); //  12:34
+//            return t[0] + "  " + time;
+            return t[0];
         }
 
 

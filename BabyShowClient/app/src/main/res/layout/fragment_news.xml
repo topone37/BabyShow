@@ -39,7 +39,8 @@
     <com.tp.bsclient.view.XListView
         android:id="@+id/lv_news"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="1dp" />
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:scrollbars="none" />
 
 </LinearLayout>
