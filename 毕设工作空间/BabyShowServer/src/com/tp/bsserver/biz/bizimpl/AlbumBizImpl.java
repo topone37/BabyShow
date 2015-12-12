@@ -16,6 +16,11 @@ public class AlbumBizImpl implements AlbumBiz {
     }
 
     @Override
+    public int addPhoto(String imgname, int aid) {
+        return albumDao.insertPhoto(aid, imgname);
+    }
+
+    @Override
     public int removeAlbumById(int aid) {
         return albumDao.delAlbumById(aid);
     }

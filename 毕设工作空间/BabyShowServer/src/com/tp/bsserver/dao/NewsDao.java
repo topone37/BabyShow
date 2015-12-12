@@ -12,7 +12,7 @@ public interface NewsDao {
 
     int delete(int id);
 
-    List<News> getAll(int currPage);
+    List<News> getAll(int currPage, int uid);
 
     String getNewsDetailById(int id, int uid);//通过动态id获取动态详情
 

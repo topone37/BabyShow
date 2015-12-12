@@ -24,7 +24,6 @@ import java.sql.SQLException;
 @WebServlet(name = "UserServlet")
 public class UserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println(">>>>>>>>UserServlet");
         UsersBiz usersBiz = new UserBizImpl();
         PrintWriter out = response.getWriter();
         //获取客户端传递的参数

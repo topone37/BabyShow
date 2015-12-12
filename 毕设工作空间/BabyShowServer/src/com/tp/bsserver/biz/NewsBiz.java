@@ -12,7 +12,7 @@ public interface NewsBiz {
 
     int remove(int id);
 
-    List<News> getAll(int currPage);
+    List<News> getAll(int currPage,int uid);
 
     String getNewsDetailById(int id,int uid);
 

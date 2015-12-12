@@ -18,9 +18,22 @@ public class AlbumDaoImpl implements AlbumDao {
     ResultSet rs;
 
     @Override
-    public int insertAlbum(String aname,int uid) {
+    public int insertAlbum(String aname, int uid) {
         sql = "insert into album values(null,?,?)";
-        if (dbHelper.execOthers(sql, aname,uid) > 0) {
+        if (dbHelper.execOthers(sql, aname, uid) > 0) {
+            //插入相册成功
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    @Override
+    public int insertPhoto(int aid, String imgname) {
+        //INSERT INTO `baby`.`photo` (`pid`, `pname`, `aid`, `pdate`) VALUES ('1', 'a1.png', '1', '2015-12-01');
+
+        sql = "insert into photo values(null,?,?,sysdate())";
+        if (dbHelper.execOthers(sql, imgname, aid) > 0) {
             //插入相册成功
             return 1;
         } else {

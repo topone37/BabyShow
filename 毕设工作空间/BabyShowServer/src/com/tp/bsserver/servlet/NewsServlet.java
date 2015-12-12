@@ -86,12 +86,14 @@ public class NewsServlet extends HttpServlet {
         } else if ("getAll".equals(action)) {
             //当前页
             int currPage = Integer.valueOf(request.getParameter("currPage").trim());
-            List<News> news = newsBiz.getAll(currPage); //获取到动态数据
+            int uid = Integer.valueOf(request.getParameter("uid").trim());
+            List<News> news = newsBiz.getAll(currPage, uid); //获取到动态数据
             Type type = new TypeToken<List<News>>() {
             }.getType(); //获取列表数据对应类型
             if (news != null) {
                 String rs = GsonUtil.toJson(news, type);
                 out.print(rs);
+                System.out.println("全部动态第一页" + rs);
             } else {
                 out.print("");
             }

@@ -1,5 +1,8 @@
 package com.tp.bsserver.servlet;
 
+import com.jspsmart.upload.SmartFile;
+import com.jspsmart.upload.SmartUpload;
+import com.jspsmart.upload.SmartUploadException;
 import com.tp.bsserver.biz.AlbumBiz;
 import com.tp.bsserver.biz.bizimpl.AlbumBizImpl;
 
@@ -8,8 +11,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 /**
  * Created by Administrator on 2015/12/5.
@@ -21,7 +26,6 @@ public class AlbumServlet extends HttpServlet {
         AlbumBiz albumBiz = new AlbumBizImpl();
         String action = request.getParameter("action");
         if ("add".equals(action)) {
-            System.out.println("Add>>>>>>>>>>>>");
             //新建相册
             String aname = request.getParameter("aname");
             int uid = Integer.valueOf(request.getParameter("uid"));
@@ -49,10 +53,62 @@ public class AlbumServlet extends HttpServlet {
             //通过相册ID得到相册的图片\
             int id = Integer.valueOf(request.getParameter("aid"));
             out.print(albumBiz.getPhotosById(id));
-        } else {
-            out.print("");
+        } else if ("addPhoto".equals(action)) {
+            System.out.println(">>>>>>>>>>>addPhotoc ccccccccccccccccccccc");
+            // 存储目录
+            String path = this.getServletContext().getRealPath("photo");
+            File fpath = new File(path);
+            if (!fpath.exists()) {
+                fpath.mkdirs();
+            }
+            // 上传文件
+            SmartUpload su = new SmartUpload("utf-8");
+            su.initialize(getServletConfig(), request, response);
+            try {
+                su.setDeniedFilesList(""); // 允许的上传类型
+                su.setMaxFileSize(5000 * 1024); // 限定大小不能超过5M
+                su.upload();
+                // 获取上传的文件
+                int num = su.getFiles().getCount();
+                String imgname = ""; // 准备一个相应长度的String数组存放图片地址
+                SmartFile file = su.getFiles().getFile(0);
+                // 保存到对应位置
+                imgname = file.getFileName();
+                file.saveAs(path + "/" + imgname);
+
+                //上传成功
+                // 插入数据库
+                //获取用户ID
+                int aid = Integer.parseInt(su.getRequest().getParameter("aid"));
+                //获取动态内容
+                if (albumBiz.addPhoto(imgname, aid) > 0) {
+                    //插入数据库成功
+                    out.print(1);
+                    return;
+                } else {
+                    out.print(-1);
+                    return;
+                }
+
+
+            } catch (SQLException e1) {
+                out.print(-1);
+                e1.printStackTrace();
+            } catch (SmartUploadException e1) {
+                out.print(-1);
+                e1.printStackTrace();
+
+            }
+
         }
+
+
+        out.flush();
+        out.close();
+        return;
+
     }
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);

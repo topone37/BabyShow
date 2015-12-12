@@ -60,11 +60,12 @@ public class NewsDaoImpl implements NewsDao {
 
     @Override
     public int delete(int id) {
-        return 0;
+        sql = "delete from news where nid = ?";
+        return dbHelper.execOthers(sql);
     }
 
     @Override
-    public List<News> getAll(int currPage) {
+    public List<News> getAll(int currPage, int uid) {
         List<News> list = new ArrayList<News>();
         //动态 ID 头像 ,介绍 ，内容
         sql = "select nid , head ,nickname,  intro , content  ,date from news , users where news.uid = users.uid order by date desc limit ?,?";
@@ -73,7 +74,6 @@ public class NewsDaoImpl implements NewsDao {
             while (rs.next()) {
                 //每一条动态
                 News news = new News();
-
                 int nid = rs.getInt(1);
                 //动态ID
                 news.setNid(nid);
@@ -87,6 +87,15 @@ public class NewsDaoImpl implements NewsDao {
                 news.setContent(rs.getString(5));
                 //动态时间
                 news.setDate(ConvertTime.convert(rs.getString(6)));
+
+                //点赞数 收藏数 评论数
+
+                news.setColNum(getColNum(nid));
+                news.setZanNum(getZanNum(nid));
+                news.setComNum(getComNum(nid));
+
+                news.setZanStatue(getZanStatue(uid, nid));
+                news.setColStatue(getColStatue(uid, nid));
 
                 //获取对应的图片
                 List<String> imgs = new ArrayList<String>(); //图片列表
@@ -133,50 +142,25 @@ public class NewsDaoImpl implements NewsDao {
                 int _uid = rs.getInt(7);
 
                  /*收藏数 通过查询收藏表获取收藏数*/
-                sql = "select count(*) from collect where nid = ?";
-                rs = dbHelper.execQuery(sql, nid);
-                if (rs.next()) {
-                    //获取评论数
-                    object.addProperty("colnum", rs.getInt(1));
-                } else {
-                    object.addProperty("colnum", 0);
-                }
+                object.addProperty("colnum", getColNum(nid));
+
 
                 //评论数 通过查询评论表获取 数量
-                sql = "select count(*) from comment where nid = ?";
-                rs = dbHelper.execQuery(sql, nid);
-                if (rs.next()) {
-                    //获取评论数
-                    object.addProperty("comnum", rs.getInt(1));
-                } else {
-                    object.addProperty("comnum", 0);
-                }
+                object.addProperty("comnum", getComNum(nid));
                 /*点赞数 通过查询点赞表获取点赞数*/
-                sql = "select count(*) from zan where nid = ?";
-                rs = dbHelper.execQuery(sql, nid);
-                if (rs.next()) {
-                    //获取评论数
-                    object.addProperty("zannum", rs.getInt(1));
-                } else {
-                    object.addProperty("zannum", 0);
-                }
+                object.addProperty("zannum", getZanNum(nid));
 
                 //获取是否已经赞
-                sql = "select * from zan where uid = ? and nid = ?";
-                if (dbHelper.execQuery(sql, uid, nid).next()) {
+                if (getZanStatue(uid, nid)) {
                     object.addProperty("zanstatue", "yes");
                 } else {
                     object.addProperty("zanstatue", "no");
                 }
-
                 //获取是否已经收藏
-                sql = "select * from collect where uid = ? and nid = ?";
-                if (dbHelper.execQuery(sql, uid, nid).next()) {
-                    System.out.println("收藏过！");
+                if (getColStatue(uid, nid)) {
                     object.addProperty("colstatue", "yes");
                 } else {
                     object.addProperty("colstatue", "no");
-                    System.out.println("没有收藏过！");
                 }
 
                 //获取对应的图片
@@ -358,4 +342,90 @@ public class NewsDaoImpl implements NewsDao {
         return 0;
     }
 
+    private int getZanNum(int nid) {
+                /*点赞数 通过查询点赞表获取点赞数*/
+        String _sql = "select count(*) from zan where nid = ?";
+        ResultSet _rs = dbHelper.execQuery(_sql, nid);
+        try {
+            if (_rs.next()) {
+                //获取评论数
+                return _rs.getInt(1);
+            } else {
+                return 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+
+
+    }
+
+    private boolean getZanStatue(int uid, int nid) {
+        //获取是否已经赞
+        String _sql = "select * from zan where uid = ? and nid = ?";
+        try {
+            if (dbHelper.execQuery(_sql, uid, nid).next()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+    }
+
+    private int getColNum(int nid) {
+         /*收藏数 通过查询收藏表获取收藏数*/
+        String _sql = "select count(*) from collect where nid = ?";
+        ResultSet _rs = dbHelper.execQuery(_sql, nid);
+        try {
+            if (_rs.next()) {
+                //获取评论数
+                return _rs.getInt(1);
+            } else {
+                return 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+
+    }
+
+    private boolean getColStatue(int uid, int nid) {
+        //获取是否已经收藏
+        String _sql = "select * from collect where uid = ? and nid = ?";
+        try {
+            if (dbHelper.execQuery(_sql, uid, nid).next()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+    }
+
+    private int getComNum(int nid) {
+        //评论数 通过查询评论表获取 数量
+        String _sql = "select count(*) from comment where nid = ?";
+        ResultSet _rs = dbHelper.execQuery(_sql, nid);
+        try {
+            if (_rs.next()) {
+                //获取评论数
+                return _rs.getInt(1);
+            } else {
+                return 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+
+    }
 }

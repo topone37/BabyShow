@@ -15,6 +15,52 @@ public class News implements Serializable {
     private String intro;//简介
     private String content;//内容
     private String date; //日期
+    private int colNum;//收藏数
+    private boolean colStatue;//收藏数
+    private int zanNum;//点赞数
+    private boolean zanStatue;//点赞状态
+    private int comNum;//评论数量
+
+    public int getColNum() {
+        return colNum;
+    }
+
+    public void setColNum(int colNum) {
+        this.colNum = colNum;
+    }
+
+    public boolean isColStatue() {
+        return colStatue;
+    }
+
+    public void setColStatue(boolean colStatue) {
+        this.colStatue = colStatue;
+    }
+
+    public int getZanNum() {
+        return zanNum;
+    }
+
+    public void setZanNum(int zanNum) {
+        this.zanNum = zanNum;
+    }
+
+    public boolean isZanStatue() {
+        return zanStatue;
+    }
+
+    public void setZanStatue(boolean zanStatue) {
+        this.zanStatue = zanStatue;
+    }
+
+    public int getComNum() {
+        return comNum;
+    }
+
+    public void setComNum(int comNum) {
+        this.comNum = comNum;
+    }
+
     private List<String> imgs;
 
     public int getNid() {

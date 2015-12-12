@@ -4,7 +4,9 @@ package com.tp.bsserver.biz;
  * Created by Administrator on 2015/12/5.
  */
 public interface AlbumBiz {
-    public int addAlbum(String aname,int uid);//添加相册
+    public int addAlbum(String aname, int uid);//添加相册
+
+    public int addPhoto(String imgname, int aid);//添加相册
 
     public int removeAlbumById(int aid);//删除相册
 

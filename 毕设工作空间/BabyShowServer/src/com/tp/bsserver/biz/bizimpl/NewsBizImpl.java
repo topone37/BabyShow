@@ -24,13 +24,13 @@ public class NewsBizImpl implements NewsBiz {
     }
 
     @Override
-    public List<News> getAll(int page) {
-        return newsDao.getAll(page);
+    public List<News> getAll(int page, int uid) {
+        return newsDao.getAll(page, uid);
     }
 
     @Override
-    public String getNewsDetailById(int id,int uid) {
-        return newsDao.getNewsDetailById(id,uid);
+    public String getNewsDetailById(int id, int uid) {
+        return newsDao.getNewsDetailById(id, uid);
     }
 
     @Override
