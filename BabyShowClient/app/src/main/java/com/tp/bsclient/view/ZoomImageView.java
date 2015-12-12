@@ -405,6 +405,7 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener,
         return Math.sqrt((dx * dx) + (dy * dy)) >= mTouchSlop;
     }
 
+    //自定义一个借口类 用于回调 加载上一张 下一站
     public interface IChangePicListener {
         void prePic();
 

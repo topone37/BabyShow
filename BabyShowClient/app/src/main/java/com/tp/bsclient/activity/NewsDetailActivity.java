@@ -44,12 +44,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
     private TextView nickname;//昵称
     private TextView intro;//简介
     private TextView content;//内容
-    private ImageView img1;//图片1
-    private ImageView img2;//图片2
-    private ImageView img3;//图片3
-    private ImageView img4;//图片4
-    private ImageView img5;//图片5
-    private ImageView img6;//图片6
+    private ImageView img[] = new ImageView[6];//图片1 - 6
     private LinearLayout ll_col;//收藏点击区域
     private LinearLayout ll_comment; //评论点击区域
     private LinearLayout ll_zan;//赞点击区域
@@ -87,12 +82,12 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
         content = (TextView) view.findViewById(R.id.tv_content_detail);//内容
         date = (TextView) view.findViewById(R.id.tv_date_detail);//日期
 
-        img1 = (ImageView) view.findViewById(R.id.img1_detail); //图片1
-        img2 = (ImageView) view.findViewById(R.id.img2_detail); //图片2
-        img3 = (ImageView) view.findViewById(R.id.img3_detail);//图片3
-        img4 = (ImageView) view.findViewById(R.id.img4_detail); //图片4
-        img5 = (ImageView) view.findViewById(R.id.img5_detail); //图片6
-        img6 = (ImageView) view.findViewById(R.id.img6_detail);//图片7
+        img[0] = (ImageView) view.findViewById(R.id.img1_detail); //图片1
+        img[1] = (ImageView) view.findViewById(R.id.img2_detail); //图片2
+        img[2] = (ImageView) view.findViewById(R.id.img3_detail);//图片3
+        img[3] = (ImageView) view.findViewById(R.id.img4_detail); //图片4
+        img[4] = (ImageView) view.findViewById(R.id.img5_detail); //图片6
+        img[5] = (ImageView) view.findViewById(R.id.img6_detail);//图片7
         cb_zan = (CheckBox) view.findViewById(R.id.cb_zan); //赞图标
         cb_col = (CheckBox) view.findViewById(R.id.cb_col); //收藏图标
 
@@ -173,57 +168,57 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                     //图片  ( 三张 )
                     JSONObject _object = object.getJSONObject("img");
                     if (!"".equals(_object.optString("img1"))) {
-                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img1"), img1, MyApp.options);
-                        img1.setTag(_object.optString("img1"));
-                        img1.setOnClickListener(new ImgOCL());
+                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img1"), img[0], MyApp.options);
+                        img[0].setTag(_object.optString("img1"));
+                        img[0].setOnClickListener(new ImgOCL());
                     } else {
-                        img1.setImageResource(R.drawable.shape_trans_style);
-                        img1.setVisibility(View.GONE);
+                        img[0].setImageResource(R.drawable.shape_trans_style);
+                        img[0].setVisibility(View.GONE);
                     }
 
                     if (!"".equals(_object.optString("img2"))) {
-                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img2"), img2, MyApp.options);
-                        img2.setTag(_object.optString("img2"));
-                        img2.setOnClickListener(new ImgOCL());
+                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img2"), img[1], MyApp.options);
+                        img[1].setTag(_object.optString("img2"));
+                        img[1].setOnClickListener(new ImgOCL());
                     } else {
-                        img2.setImageResource(R.drawable.shape_trans_style);
-                        img2.setVisibility(View.GONE);
+                        img[1].setImageResource(R.drawable.shape_trans_style);
+                        img[1].setVisibility(View.GONE);
                     }
                     if (!"".equals(_object.optString("img3"))) {
-                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img3"), img3, MyApp.options);
-                        img3.setTag(_object.optString("img3"));
-                        img3.setOnClickListener(new ImgOCL());
+                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img3"), img[2], MyApp.options);
+                        img[2].setTag(_object.optString("img3"));
+                        img[2].setOnClickListener(new ImgOCL());
                     } else {
                         Log.v("tp", "img3没有");
-                        img3.setImageResource(R.drawable.shape_trans_style);
-                        img3.setVisibility(View.GONE);
+                        img[2].setImageResource(R.drawable.shape_trans_style);
+                        img[2].setVisibility(View.GONE);
                     }
                     if (!"".equals(_object.optString("img4"))) {
-                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img4"), img4, MyApp.options);
-                        img4.setTag(_object.optString("img4"));
-                        img4.setOnClickListener(new ImgOCL());
+                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img4"), img[3], MyApp.options);
+                        img[3].setTag(_object.optString("img4"));
+                        img[3].setOnClickListener(new ImgOCL());
                     } else {
                         Log.v("tp", "img4没有");
-                        img4.setImageResource(R.drawable.shape_trans_style);
-                        img4.setVisibility(View.GONE);
+                        img[3].setImageResource(R.drawable.shape_trans_style);
+                        img[3].setVisibility(View.GONE);
                     }
                     if (!"".equals(_object.optString("img5"))) {
-                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img5"), img5, MyApp.options);
-                        img5.setTag(_object.optString("img5"));
-                        img5.setOnClickListener(new ImgOCL());
+                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img5"), img[4], MyApp.options);
+                        img[4].setTag(_object.optString("img5"));
+                        img[4].setOnClickListener(new ImgOCL());
                     } else {
                         Log.v("tp", "img5没有");
-                        img5.setImageResource(R.drawable.shape_trans_style);
-                        img5.setVisibility(View.GONE);
+                        img[4].setImageResource(R.drawable.shape_trans_style);
+                        img[4].setVisibility(View.GONE);
                     }
                     if (!"".equals(_object.optString("img6"))) {
-                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img6"), img6, MyApp.options);
-                        img6.setTag(_object.optString("img6"));
-                        img6.setOnClickListener(new ImgOCL());
+                        MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img6"), img[5], MyApp.options);
+                        img[5].setTag(_object.optString("img6"));
+                        img[5].setOnClickListener(new ImgOCL());
                     } else {
                         Log.v("tp", "img6没有");
-                        img6.setImageResource(R.drawable.shape_trans_style);
-                        img6.setVisibility(View.GONE);
+                        img[5].setImageResource(R.drawable.shape_trans_style);
+                        img[5].setVisibility(View.GONE);
                     }
 
 
@@ -330,7 +325,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                     if ("1".equals(responseInfo.result)) {
                         //评论成功
                         Toast.makeText(NewsDetailActivity.this, "评论成功！", Toast.LENGTH_SHORT).show();
-                        initData(); //刷新试图
+                        initData(); //刷新视图
                     } else {
                         //评论失败
                         Toast.makeText(NewsDetailActivity.this, "评论失败！", Toast.LENGTH_SHORT).show();
@@ -469,13 +464,15 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
 
         @Override
         public void onClick(View v) {
-            String url = (String) v.getTag();
-            if (url != null) {
-                //可以预览
-                startActivity(new Intent(NewsDetailActivity.this, PreViewActivity.class).putExtra("pname", url));
-            } else {
-                return;
-            }
+//            String url = (String) v.getTag();
+//            if (url != null) {
+//                //可以预览
+//
+//                startActivity(new Intent(NewsDetailActivity.this, PreViewActivity.class).putExtra("pname", url));
+//            } else {
+//                return;
+//            }
+
         }
     }
 }
