@@ -22,6 +22,7 @@ import com.tp.bsclient.R;
 import com.tp.bsclient.activity.AddNewsActivity;
 import com.tp.bsclient.activity.NewsDetailActivity;
 import com.tp.bsclient.adapter.NewsAdapter;
+import com.tp.bsclient.application.MyApp;
 import com.tp.bsclient.util.GsonUtil;
 import com.tp.bsclient.util.UrlConst;
 import com.tp.bsclient.view.XListView;
@@ -70,10 +71,14 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
     }
 
     private void getData() {
+        if (MyApp.users == null) {
+            return;
+        }
         //初始化视图时先来第一页数据
         HttpUtils httpUtils = new HttpUtils();
         RequestParams params = new RequestParams();
         params.addBodyParameter("currPage", currpage + ""); //将当前页传入
+        params.addBodyParameter("uid", MyApp.users.getUid() + ""); //将当前页传入
         httpUtils.send(HttpRequest.HttpMethod.POST, UrlConst.BASE_URL + "NewsServlet?action=getAll", params, new RequestCallBack<String>() {
 
             @Override

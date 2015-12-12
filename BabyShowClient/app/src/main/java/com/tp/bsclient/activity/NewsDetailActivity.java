@@ -39,9 +39,6 @@ import org.json.JSONObject;
  */
 public class NewsDetailActivity extends Activity implements View.OnClickListener {
     private LinearLayout ll_back;//返回
-    private LinearLayout ll_col;//收藏点击区域
-    private LinearLayout ll_comment; //评论点击区域
-    private LinearLayout ll_zan;//赞点击区域
 
 
     private CircleImageView head;//头像
@@ -56,13 +53,15 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
     private ImageView img5;//图片5
     private ImageView img6;//图片6
 
-    private CheckBox cb_zan;//赞 图标
-    private CheckBox cb_col;//收藏 图标
-
-
+    private LinearLayout ll_col;//收藏点击区域
+    private LinearLayout ll_comment; //评论点击区域
+    private LinearLayout ll_zan;//赞点击区域
     private TextView tv_colnum;
     private TextView tv_comnum;
     private TextView tv_zannum;
+    private CheckBox cb_zan;//赞 图标
+    private CheckBox cb_col;//收藏 图标
+
 
     private TextView date; //日期
     private String nid; //动态ID

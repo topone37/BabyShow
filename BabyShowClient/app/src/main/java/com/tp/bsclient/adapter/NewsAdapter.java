@@ -81,6 +81,12 @@ public class NewsAdapter extends BaseAdapter {
             holder.img1 = (ImageView) view.findViewById(R.id.img1);
             holder.img2 = (ImageView) view.findViewById(R.id.img2);
             holder.img3 = (ImageView) view.findViewById(R.id.img3);
+//
+            holder.tv_colnum = (TextView) view.findViewById(R.id.tv_col_num_item);
+            holder.tv_comnum = (TextView) view.findViewById(R.id.tv_comment_num_item);
+            holder.tv_zannum = (TextView) view.findViewById(R.id.tv_zan_num_item);
+            holder.iv_col = (ImageView) view.findViewById(R.id.iv_col);
+            holder.iv_zan = (ImageView) view.findViewById(R.id.iv_zan);
 
 
             holder.date = (TextView) view.findViewById(R.id.tv_date);
@@ -158,6 +164,21 @@ public class NewsAdapter extends BaseAdapter {
             MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + imgs.get(1), holder.img2, MyApp.options);
             MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + imgs.get(2), holder.img3, MyApp.options);
         }
+//        //初始化相关数据
+        if (news.isColStatue()) {
+            holder.iv_col.setImageResource(R.drawable.btn_col_sel);
+        } else {
+            holder.iv_col.setImageResource(R.drawable.btn_col);
+        }
+        if (news.isZanStatue()) {
+            holder.iv_zan.setImageResource(R.drawable.btn_zan_sel);
+        } else {
+            holder.iv_zan.setImageResource(R.drawable.btn_zan);
+        }
+
+        holder.tv_colnum.setText(news.getColNum() + "");
+        holder.tv_comnum.setText(news.getComNum() + "");
+        holder.tv_zannum.setText(news.getZanNum() + "");
         return view;
     }
 
@@ -174,6 +195,14 @@ public class NewsAdapter extends BaseAdapter {
 
         public TextView date; //日期
 
+        public TextView tv_colnum;
+        public TextView tv_comnum;
+        public TextView tv_zannum;
+        public ImageView iv_zan;//赞 图标
+        public ImageView iv_col;//收藏 图标
+
 
     }
+
+
 }
