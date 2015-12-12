@@ -40,7 +40,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -150,11 +149,18 @@ public class AlbumDetailActivity extends Activity implements AdapterView.OnItemC
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //点击了图片
         try {
-            JSONObject object = array.getJSONObject(position);
-            String imgName = object.optString("pname");
+
+//            JSONObject object = array.getJSONObject(position);
+//            String imgName = object.optString("pname");
+            String[] imgnames = new String[array.length()];
+            //将有所有图片传入
+            for (int i = 0; i < array.length(); i++) {
+                imgnames[i] = array.getJSONObject(i).optString("pname");
+
+            }
             //跳转到图片预览页
             //将 图片名字传入
-            startActivity(new Intent(AlbumDetailActivity.this, PreViewActivity.class).putExtra("pname", imgName));
+            startActivity(new Intent(AlbumDetailActivity.this, PreViewActivity.class).putExtra("pname", imgnames).putExtra("curr", position));
         } catch (JSONException e) {
             e.printStackTrace();
             Toast.makeText(AlbumDetailActivity.this, "图片无法获取！", Toast.LENGTH_SHORT).show();

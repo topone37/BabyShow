@@ -84,6 +84,7 @@ public class LoginActivity extends Activity {
                         editor.commit();
                         //直接跳转到主界面
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        finish();
                     } else {
                         Toast.makeText(LoginActivity.this, "用户名或者密码不正确", Toast.LENGTH_LONG).show();
 
@@ -98,6 +99,7 @@ public class LoginActivity extends Activity {
 
                 }
             });
+
 
         }
 

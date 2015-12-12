@@ -61,20 +61,25 @@ public class StartActivity extends Activity {
                                         //登录成功 将 User存入全局变量中
                                         MyApp.users = (Users) GsonUtil.fromJson(result, Users.class);
                                         startActivity(new Intent(StartActivity.this, MainActivity.class));
+                                        finish();
                                     }
                                 }
 
                                 @Override
                                 public void onFailure(HttpException e, String s) {
-
+                                    //如果不是第一次 直接进入主界面
+                                    startActivity(new Intent(StartActivity.this, LoginActivity.class));
+                                    finish();
                                 }
                             });
 
                         }
+                    } else {
+                        //如果不是第一次 直接进入主界面
+                        startActivity(new Intent(StartActivity.this, LoginActivity.class));
+                        finish();
                     }
-                    //如果不是第一次 直接进入主界面
-                    startActivity(new Intent(StartActivity.this, LoginActivity.class));
-                    finish();
+
                 }
             }
         }, 100);

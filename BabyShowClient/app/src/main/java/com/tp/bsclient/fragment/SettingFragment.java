@@ -31,6 +31,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
     private RelativeLayout rl_feedback;
     private RelativeLayout rl_about;
     private RelativeLayout rl_more;
+    private RelativeLayout rl_exit;
     private CircleImageView head;
     private TextView nickname;
 
@@ -64,6 +65,8 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         rl_about.setOnClickListener(this);
         rl_more = (RelativeLayout) view.findViewById(R.id.rl_more);
         rl_more.setOnClickListener(this);
+        rl_exit = (RelativeLayout) view.findViewById(R.id.rl_exit);
+        rl_exit.setOnClickListener(this);
         if (MyApp.users != null) {
             MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + MyApp.users.getHead(), head, MyApp.options);//头像异步加载
         } else {
@@ -103,6 +106,11 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
             case R.id.rl_about:
                 //更多
                 startActivity(new Intent(getActivity(), AboutActivity.class));
+                break;
+
+            case R.id.rl_exit:
+                //更多
+                getActivity().finish();
                 break;
 
             default:

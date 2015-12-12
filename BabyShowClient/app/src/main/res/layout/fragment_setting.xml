@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_bg"
+    android:background="#EEE"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -47,6 +47,10 @@
             android:textSize="12sp" />
     </RelativeLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/color_line" />
 
     <RelativeLayout
         android:id="@+id/rl_mynews"
@@ -120,11 +124,17 @@
 
     </RelativeLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_line" />
+
     <RelativeLayout
         android:id="@+id/rl_feedback"
         android:layout_width="match_parent"
         android:layout_height="32dp"
-        android:layout_marginTop="20dp"
+
         android:background="#FFF"
         android:clickable="true">
 
@@ -230,4 +240,40 @@
             android:src="@drawable/go_normal" />
 
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/color_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_exit"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#FFF"
+        android:clickable="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="退出登录"
+            android:textColor="#F00" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/color_line" />
 </LinearLayout>

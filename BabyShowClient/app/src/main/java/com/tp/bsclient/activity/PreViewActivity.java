@@ -7,14 +7,10 @@ import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
-import android.widget.Toast;
 
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageSize;
 import com.tp.bsclient.R;
+import com.tp.bsclient.application.MyApp;
 import com.tp.bsclient.util.UrlConst;
 import com.tp.bsclient.view.ZoomImageView;
 
@@ -25,71 +21,39 @@ import com.tp.bsclient.view.ZoomImageView;
  *
  * @author Administrator
  */
-public class PreViewActivity extends Activity {
+public class PreViewActivity extends Activity implements ZoomImageView.IChangePicListener {
+    int widthPixels;
+    int heightPixels;
     private ZoomImageView zoomView;
-    private GestureDetector gestureDetector;
-    private String pname; //图片的名字
-    private ImageLoader imageLoader;
-    private DisplayImageOptions options;
-
+    private String[] pname; //图片的名字
+    private int currItem;
+    private ImageSize imageSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preview);
-        imageLoader = ImageLoader.getInstance();
-        // 使用DisplayImageOptions.Builder()创建DisplayImageOptions
-        options = new DisplayImageOptions.Builder()
-                .showImageOnLoading(R.drawable.loading) // 设置图片下载期间显示的图片
-                .showImageForEmptyUri(R.drawable.shape_trans_style) // 设置图片Uri为空或是错误的时候显示的图片
-                .showImageOnFail(R.drawable.shape_trans_style) // 设置图片加载或解码过程中发生错误显示的图片
-                .cacheInMemory(true) // 设置下载的图片是否缓存在内存中
-                .cacheOnDisk(true) // 设置下载的图片是否缓存在SD卡中
-                .build(); // 构建完成
         zoomView = (ZoomImageView) findViewById(R.id.zoom_view);
+        zoomView.setonChangePicListenetr(this);
         /* 通过Intent获取图片的下载地址 */
-        pname = getIntent().getStringExtra("pname");
+        pname = getIntent().getStringArrayExtra("pname");
+        currItem = getIntent().getIntExtra("curr", 1);
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        final int widthPixels = metrics.widthPixels;
-        final int heightPixels = metrics.heightPixels;
+        imageSize = new ImageSize(widthPixels, heightPixels);
+        widthPixels = metrics.widthPixels;
+        heightPixels = metrics.heightPixels;
+        initPic();
 
-        if (!"".equals(pname)) {
-            ImageSize imageSize = new ImageSize(widthPixels, heightPixels);
-            Bitmap bitmap = imageLoader.loadImageSync(UrlConst.PHOTO_URL + pname, imageSize, options);
-//            imageLoader.displayImage(UrlConst.PHOTO_URL + pname, zoomView, options); //将图片加载
+    }
+
+    private void initPic() {
+        if (!pname[currItem].equals("")) {
+            Bitmap bitmap = MyApp.imageLoader.loadImageSync(UrlConst.PHOTO_URL + pname[currItem], imageSize, MyApp.options);
             zoomView.setImageBitmap(zoomBitmap(bitmap, widthPixels, heightPixels));
         } else {
             zoomView.setImageBitmap(zoomBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.img01), widthPixels, heightPixels));
         }
-//        zoomView.setImageBitmap(zoomBitmap(
-//                BitmapFactory.decodeResource(getResources(), R.drawable.img01), widthPixels,
-//                heightPixels));
-        gestureDetector = new GestureDetector(this,
-                new GestureDetector.SimpleOnGestureListener() {
-                    @Override
-                    public boolean onFling(MotionEvent e1, MotionEvent e2,
-                                           float velocityX, float velocityY) {
-                        float x = e2.getX() - e1.getX();
-                        if (x > 0) {
-                            prePicture();
-                        } else if (x < 0) {
-
-                            nextPicture();
-                        }
-                        return true;
-                    }
-                });
-    }
-
-    protected void nextPicture() {
-        Toast.makeText(PreViewActivity.this, "下一个", Toast.LENGTH_SHORT).show();
-
-    }
-
-    protected void prePicture() {
-        Toast.makeText(PreViewActivity.this, "上一个", Toast.LENGTH_SHORT).show();
-
     }
 
     @Override
@@ -111,10 +75,6 @@ public class PreViewActivity extends Activity {
         }
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return gestureDetector.onTouchEvent(event);
-    }
 
     public Bitmap zoomBitmap(Bitmap bitmap, int width, int height) {
         if (bitmap == null)
@@ -131,5 +91,21 @@ public class PreViewActivity extends Activity {
         }
         Bitmap newbmp = Bitmap.createBitmap(bitmap, 0, 0, w, h, matrix, true);
         return newbmp;
+    }
+
+    @Override
+    public void prePic() {
+        if (currItem > 0) {
+            currItem--;
+            initPic();
+        }
+    }
+
+    @Override
+    public void nextPic() {
+        if (currItem < pname.length - 1) {
+            currItem++;
+            initPic();
+        }
     }
 }

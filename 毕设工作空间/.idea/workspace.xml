@@ -22,57 +22,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0691c01b-e10e-4b18-b083-4fd5d000b326" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/AlbumBiz.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/AlbumBiz.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/NewsBiz.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/NewsBiz.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/bizimpl/NewsBizImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/bizimpl/NewsBizImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/AlbumDao.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/AlbumDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/NewsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/NewsDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/AlbumServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/AlbumServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$1.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$2.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$3.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/UserServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/UserServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/vo/News.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/vo/News.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/AlbumBiz.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/AlbumBiz.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/NewsBiz.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/NewsBiz.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/bizimpl/NewsBizImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/bizimpl/NewsBizImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/AlbumDao.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/AlbumDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/NewsDao.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/NewsDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/AlbumServlet.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/AlbumServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$1.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$2.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$3.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/UserServlet.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/UserServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/vo/News.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/vo/News.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/AlbumDetailActivity.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/AlbumDetailActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/LoginActivity.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/NewsDetailActivity.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/NewsDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/adapter/NewsAdapter.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/adapter/NewsAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/fragment/NewsFragment.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/fragment/NewsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/vo/News.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/vo/News.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/fragment_news.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/fragment_news.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/PreViewActivity.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/PreViewActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/StartActivity.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/StartActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/WelcomeActivity.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/WelcomeActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/fragment/SettingFragment.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/fragment/SettingFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/view/ZoomImageView.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/view/ZoomImageView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/fragment_setting.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/fragment_setting.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/list_item_news.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/list_item_news.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/AlbumBiz.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/AlbumBiz.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/NewsBiz.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/NewsBiz.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/NewsBizImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/NewsBizImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/AlbumDao.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/AlbumDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/NewsDao.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/NewsDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/AlbumServlet.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/AlbumServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/NewsServlet.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/NewsServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/UserServlet.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/UserServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/vo/News.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/vo/News.java" />
     </list>
     <ignored path="毕设工作空间.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,7 +60,7 @@
     <favorites_list name="毕设工作空间" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -201,10 +161,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1918" />
-    <option name="height" value="1038" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -532,6 +492,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="毕设工作空间" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -560,16 +530,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="毕设工作空间" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -589,7 +549,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.36248562" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/大图预览/BigPictureTest" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -1265,7 +1225,9 @@
       <workItem from="1449747923157" duration="1937000" />
       <workItem from="1449755632111" duration="679000" />
       <workItem from="1449830738012" duration="4587000" />
-      <workItem from="1449889073703" duration="12852000" />
+      <workItem from="1449889073703" duration="13755000" />
+      <workItem from="1449919700085" duration="1796000" />
+      <workItem from="1449926822190" duration="68000" />
     </task>
     <task id="LOCAL-00001" summary="1212">
       <created>1449918450830</created>
@@ -1277,7 +1239,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274376000" />
+    <option name="totallyTimeSpent" value="277143000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1289,7 +1251,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1918" height="1038" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1301,10 +1263,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251121" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33524027" sideWeight="0.48504272" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3352018" sideWeight="0.48504272" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37214363" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1806904" sideWeight="0.47678018" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18055555" sideWeight="0.47678018" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20459402" sideWeight="0.5232198" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946581" sideWeight="0.49527186" order="1" side_tool="false" content_ui="tabs" />
@@ -1645,7 +1607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9198606">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1653,7 +1614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1661,12 +1621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <element signature="e#366#367#0" expanded="false" />
-            <element signature="e#421#422#0" expanded="false" />
-            <element signature="e#487#488#0" expanded="false" />
-            <element signature="e#544#545#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1674,7 +1628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4481752">
           <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1682,7 +1635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.36058393">
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1690,7 +1642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1698,7 +1649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="74" selection-start-line="56" selection-start-column="74" selection-end-line="56" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1706,7 +1656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1714,7 +1663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1722,28 +1670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7090909">
           <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding>
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1112#1113#0" expanded="true" />
-            <element signature="e#1142#1143#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1248#1249#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1751,7 +1677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.054545455">
           <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1759,7 +1684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8963636">
           <caret line="94" column="30" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1767,23 +1691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16727273">
           <caret line="404" column="29" selection-start-line="404" selection-start-column="29" selection-end-line="404" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#insert#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#delete#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="e#2019#2025#0" expanded="true" />
-            <element signature="e#3244#3252#0" expanded="true" />
-            <element signature="method#getNewsDetailById#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#updateZan#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#updateCol#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#queryNewsByUid#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="e#8041#8047#0" expanded="true" />
-            <element signature="method#queryColByUid#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="e#9536#9542#0" expanded="true" />
-            <element signature="e#9731#9737#0" expanded="true" />
-            <element signature="method#updateComment#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#getColNum#0;class#NewsDaoImpl#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1791,10 +1698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -73,6 +73,7 @@ public class WelcomeActivity extends Activity {
             public void onClick(View view) {
                 //点击进入主界面
                 startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+                finish();
             }
         });
 

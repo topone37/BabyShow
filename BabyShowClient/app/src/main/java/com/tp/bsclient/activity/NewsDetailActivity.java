@@ -38,21 +38,18 @@ import org.json.JSONObject;
  * Created by Administrator on 2015/11/23.
  */
 public class NewsDetailActivity extends Activity implements View.OnClickListener {
+    boolean isHideCommect = false;
     private LinearLayout ll_back;//返回
-
-
     private CircleImageView head;//头像
     private TextView nickname;//昵称
     private TextView intro;//简介
     private TextView content;//内容
-
     private ImageView img1;//图片1
     private ImageView img2;//图片2
     private ImageView img3;//图片3
     private ImageView img4;//图片4
     private ImageView img5;//图片5
     private ImageView img6;//图片6
-
     private LinearLayout ll_col;//收藏点击区域
     private LinearLayout ll_comment; //评论点击区域
     private LinearLayout ll_zan;//赞点击区域
@@ -61,18 +58,13 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
     private TextView tv_zannum;
     private CheckBox cb_zan;//赞 图标
     private CheckBox cb_col;//收藏 图标
-
-
     private TextView date; //日期
     private String nid; //动态ID
-
-
     private LinearLayout ll_comment_hide;
     private EditText edit_comment;
     private Button btn_comment;
     private ListView lv_comment;
     private CommentAdapter adapter;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,7 +76,6 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
         initView();
         initData();
     }
-
 
     private void initView() {
         View view = getLayoutInflater().inflate(R.layout.list_head_newsdetail, null);
@@ -405,6 +396,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
         edit_comment.setFocusableInTouchMode(true);
         edit_comment.setFocusable(true);
         edit_comment.requestFocus();
+        isHideCommect = false;
 
     }
 
@@ -415,22 +407,23 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
         }
     }
 
-
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) { //监听按下事件
             View v = getCurrentFocus(); //得到当前获取焦点的View
             if (isShouldHideInput(v, ev)) {
-
+                if (isHideCommect) {
+                    hideComment();
+                }
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
                 if (imm != null) {
                     //隐藏输入法
                     imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                    isHideCommect = true;
                 }
-            } else {
-                //隐藏评论框
-                hideComment();
+
+
             }
 
 
