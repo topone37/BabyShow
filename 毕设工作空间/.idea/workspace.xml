@@ -22,66 +22,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0691c01b-e10e-4b18-b083-4fd5d000b326" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/drawable-xhdpi/cancel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/drawable-xhdpi/ll_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/drawable-xhdpi/see.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/drawable/shape_corner_style.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/dialog_exit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/dialog_newalbum.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/dialog_re_del.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/intermediates/manifests/tmp/manifestMerger6793692545696872375.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/intermediates/manifests/tmp/manifestMerger887881230884440025.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/view/CustomDialog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/dialog_addalbum.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/intermediates/bundles/release/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/intermediates/resources/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/intermediates/resources/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/outputs/aar/IMKit-debug.aar" afterPath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/outputs/aar/IMKit-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/outputs/aar/IMKit-release.aar" afterPath="$PROJECT_DIR$/../BabyShowClient/IMKit/build/outputs/aar/IMKit-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/AlbumBiz.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/AlbumBiz.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/AlbumDao.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/AlbumDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/AlbumServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/AlbumServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$1.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$2.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$3.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/NewsServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/AlbumBiz.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/AlbumBiz.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/AlbumDao.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/AlbumDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/AlbumServlet.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/AlbumServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$1.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$2.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$3.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/NewsServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/MyNewsActivity.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/MyNewsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/NewsDetailActivity.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/NewsDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/PreViewActivity.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/activity/PreViewActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/adapter/AlbumAdapter.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/adapter/AlbumAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/adapter/NewsAdapter.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/adapter/NewsAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/adapter/PhotoTimeAdapter.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/adapter/PhotoTimeAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/fragment/HomeFragment.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/fragment/HomeFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/fragment/NewsFragment.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/fragment/NewsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/fragment/SettingFragment.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/fragment/SettingFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/util/UrlConst.java" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/java/com/tp/bsclient/util/UrlConst.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/activity_addfriends.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/activity_addfriends.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/activity_preview.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/activity_preview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/activity_userinfo.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/activity_userinfo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/fragment_setting.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/layout/fragment_setting.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/../BabyShowClient/app/src/main/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/AlbumBiz.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/AlbumBiz.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/AlbumDao.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/AlbumDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/AlbumServlet.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/AlbumServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/NewsServlet.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/NewsServlet.java" />
     </list>
     <ignored path="毕设工作空间.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,35 +50,7 @@
     <favorites_list name="毕设工作空间" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NewsDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
-              <folding>
-                <element signature="method#getAll#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#queryNewsByUid#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#queryColByUid#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#getComNum#0;class#NewsDaoImpl#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/NewsServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76512456">
-              <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -587,125 +500,15 @@
               <option name="myItemId" value="毕设工作空间" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="毕设工作空间" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BabyShowServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="毕设工作空间" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BabyShowServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="毕设工作空间" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BabyShowServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="毕设工作空间" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BabyShowServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="毕设工作空间" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BabyShowServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="daoimpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="毕设工作空间" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BabyShowServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bsserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1081,6 +884,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -1125,6 +944,34 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -1378,7 +1225,7 @@
       <workItem from="1449974439948" duration="1425000" />
       <workItem from="1449981084171" duration="1324000" />
       <workItem from="1449982869548" duration="108000" />
-      <workItem from="1449983030975" duration="9080000" />
+      <workItem from="1449983030975" duration="10298000" />
     </task>
     <task id="LOCAL-00001" summary="1212">
       <created>1449918450830</created>
@@ -1390,7 +1237,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289679000" />
+    <option name="totallyTimeSpent" value="290897000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1402,8 +1249,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21545158" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1417,7 +1264,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3352018" sideWeight="0.48504272" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37214363" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18055555" sideWeight="0.47678018" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18055555" sideWeight="0.47678018" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20459402" sideWeight="0.5232198" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946581" sideWeight="0.49527186" order="1" side_tool="false" content_ui="tabs" />
@@ -1867,8 +1714,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/NewsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76512456">
-          <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.4128114">
+          <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
