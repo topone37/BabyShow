@@ -60,6 +60,8 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
     private Button btn_comment;
     private ListView lv_comment;
     private CommentAdapter adapter;
+    private int picNum = 0; //图片数量
+    private String[] urls;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -169,59 +171,93 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                     JSONObject _object = object.getJSONObject("img");
                     if (!"".equals(_object.optString("img1"))) {
                         MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img1"), img[0], MyApp.options);
-                        img[0].setTag(_object.optString("img1"));
+                        //图片存在 就
+
+                        img[0].setTag(R.id.imgurl_tag, _object.optString("img1"));
+                        img[0].setTag(R.id.position_tag, picNum);
                         img[0].setOnClickListener(new ImgOCL());
+                        picNum++;
+
                     } else {
+                        img[0].setTag(R.id.position_tag, -1);
                         img[0].setImageResource(R.drawable.shape_trans_style);
                         img[0].setVisibility(View.GONE);
                     }
 
                     if (!"".equals(_object.optString("img2"))) {
                         MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img2"), img[1], MyApp.options);
-                        img[1].setTag(_object.optString("img2"));
+
+                        img[1].setTag(R.id.imgurl_tag, _object.optString("img2"));
+                        img[1].setTag(R.id.position_tag, picNum);
                         img[1].setOnClickListener(new ImgOCL());
+                        picNum++;
                     } else {
+                        img[1].setTag(R.id.position_tag, -1);
                         img[1].setImageResource(R.drawable.shape_trans_style);
                         img[1].setVisibility(View.GONE);
                     }
                     if (!"".equals(_object.optString("img3"))) {
                         MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img3"), img[2], MyApp.options);
-                        img[2].setTag(_object.optString("img3"));
+
+                        img[2].setTag(R.id.imgurl_tag, _object.optString("img3"));
+                        img[2].setTag(R.id.position_tag, picNum);
                         img[2].setOnClickListener(new ImgOCL());
+                        picNum++;
                     } else {
+                        img[2].setTag(R.id.position_tag, -1);
                         Log.v("tp", "img3没有");
                         img[2].setImageResource(R.drawable.shape_trans_style);
                         img[2].setVisibility(View.GONE);
                     }
                     if (!"".equals(_object.optString("img4"))) {
                         MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img4"), img[3], MyApp.options);
-                        img[3].setTag(_object.optString("img4"));
+
+                        img[3].setTag(R.id.imgurl_tag, _object.optString("img4"));
+                        img[3].setTag(R.id.position_tag, picNum);
                         img[3].setOnClickListener(new ImgOCL());
+                        picNum++;
                     } else {
+                        img[3].setTag(R.id.position_tag, -1);
                         Log.v("tp", "img4没有");
                         img[3].setImageResource(R.drawable.shape_trans_style);
                         img[3].setVisibility(View.GONE);
                     }
                     if (!"".equals(_object.optString("img5"))) {
                         MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img5"), img[4], MyApp.options);
-                        img[4].setTag(_object.optString("img5"));
+
+                        img[4].setTag(R.id.imgurl_tag, _object.optString("img5"));
+                        img[4].setTag(R.id.position_tag, picNum);
                         img[4].setOnClickListener(new ImgOCL());
+                        picNum++;
                     } else {
+                        img[4].setTag(R.id.position_tag, -1);
                         Log.v("tp", "img5没有");
                         img[4].setImageResource(R.drawable.shape_trans_style);
                         img[4].setVisibility(View.GONE);
                     }
                     if (!"".equals(_object.optString("img6"))) {
                         MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + _object.optString("img6"), img[5], MyApp.options);
-                        img[5].setTag(_object.optString("img6"));
+
+                        img[5].setTag(R.id.imgurl_tag, _object.optString("img6"));
+                        img[5].setTag(R.id.position_tag, picNum);
                         img[5].setOnClickListener(new ImgOCL());
+                        picNum++;
                     } else {
+                        img[5].setTag(R.id.position_tag, -1);
                         Log.v("tp", "img6没有");
                         img[5].setImageResource(R.drawable.shape_trans_style);
                         img[5].setVisibility(View.GONE);
                     }
 
 
+                    Toast.makeText(NewsDetailActivity.this, "picNum" + picNum, Toast.LENGTH_SHORT).show();
+                    //拿到所有图片的对应Url
+                    urls = new String[picNum];
+                    //遍历ImageView数组
+                    for (int i = 0; i < picNum; i++) {
+                        //证明有图片
+                        urls[i] = (String) img[i].getTag(R.id.imgurl_tag);
+                    }
                     JSONArray com_array = object.getJSONArray("com_array"); //得到相关评论的数据
 
                     //数据 装载适配器
@@ -464,14 +500,12 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
 
         @Override
         public void onClick(View v) {
-//            String url = (String) v.getTag();
-//            if (url != null) {
-//                //可以预览
-//
-//                startActivity(new Intent(NewsDetailActivity.this, PreViewActivity.class).putExtra("pname", url));
-//            } else {
-//                return;
-//            }
+            //得到当前点击的图片位置
+            int currP = (int) v.getTag(R.id.position_tag);
+            Toast.makeText(NewsDetailActivity.this, "currrp" + currP, Toast.LENGTH_SHORT).show();
+            if (urls != null) {
+                startActivity(new Intent(NewsDetailActivity.this, PreViewActivity.class).putExtra("pname", urls).putExtra("curr", currP));
+            }
 
         }
     }

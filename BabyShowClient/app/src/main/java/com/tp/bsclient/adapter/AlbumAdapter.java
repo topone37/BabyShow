@@ -91,7 +91,6 @@ public class AlbumAdapter extends BaseAdapter {
             if (!"".equals(object.optString("aphoto"))) {
                 MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + object.optString("aphoto"), holder.iv_album, MyApp.options); //相册封面
             } else {
-
                 holder.iv_album.setImageResource(R.drawable.defualt_noimg);
             }
         } catch (JSONException e) {

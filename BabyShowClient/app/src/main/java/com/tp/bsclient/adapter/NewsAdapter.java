@@ -150,7 +150,6 @@ public class NewsAdapter extends BaseAdapter {
             holder.img3.setVisibility(View.GONE);
             MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + imgs.get(0), holder.img1, MyApp.options);
         } else if (imgs.size() == 2) {
-            Log.v("tp", "2");
             holder.img1.setVisibility(View.VISIBLE);
             holder.img2.setVisibility(View.VISIBLE);
             holder.img3.setVisibility(View.GONE);

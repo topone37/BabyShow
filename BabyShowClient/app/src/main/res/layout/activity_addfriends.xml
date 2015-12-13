@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_bg"
     android:orientation="vertical"
     tools:context="com.tp.bsclient.activity.AddFriendsActivity">
 
@@ -14,13 +15,16 @@
             android:id="@+id/ll_back_addFriends"
             android:layout_width="@dimen/back_width"
             android:layout_height="@dimen/edit_height"
-            android:layout_centerVertical="true">
+            android:layout_centerVertical="true"
+            android:background="@drawable/sel_btn_back_style"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="15dp">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/back_mg_left"
                 android:src="@drawable/back" />
         </LinearLayout>
 
@@ -43,12 +47,16 @@
         android:id="@+id/edit_friendid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:hint="请输入你想要添加的好友帐号" />
 
     <Button
         android:id="@+id/btn_add_friends"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
         android:text="添加" />
 </LinearLayout>

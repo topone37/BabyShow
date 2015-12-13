@@ -1,11 +1,17 @@
 package com.tp.bsclient.fragment;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +19,7 @@ import android.widget.Toast;
 import com.tp.bsclient.R;
 import com.tp.bsclient.activity.AboutActivity;
 import com.tp.bsclient.activity.FeedbackActivity;
+import com.tp.bsclient.activity.LoginActivity;
 import com.tp.bsclient.activity.MoreActivity;
 import com.tp.bsclient.activity.MyCollectsActivity;
 import com.tp.bsclient.activity.MyNewsActivity;
@@ -31,9 +38,11 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
     private RelativeLayout rl_feedback;
     private RelativeLayout rl_about;
     private RelativeLayout rl_more;
+    private RelativeLayout rl_logout;
     private RelativeLayout rl_exit;
     private CircleImageView head;
     private TextView nickname;
+    private Dialog dialog;
 
 
     @Override
@@ -66,7 +75,9 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         rl_more = (RelativeLayout) view.findViewById(R.id.rl_more);
         rl_more.setOnClickListener(this);
         rl_exit = (RelativeLayout) view.findViewById(R.id.rl_exit);
+        rl_logout = (RelativeLayout) view.findViewById(R.id.rl_logout);
         rl_exit.setOnClickListener(this);
+        rl_logout.setOnClickListener(this);
         if (MyApp.users != null) {
             MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + MyApp.users.getHead(), head, MyApp.options);//头像异步加载
         } else {
@@ -109,12 +120,96 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.rl_exit:
+                exit();
                 //更多
-                getActivity().finish();
+//
+                break;
+            case R.id.rl_logout:
+                //更多
+
+                logout();
                 break;
 
             default:
                 break;
         }
+    }
+
+    private void exit() {
+        LayoutInflater layout = LayoutInflater.from(getActivity());
+        View mView = layout.inflate(R.layout.dialog_exit, null);
+        dialog = new AlertDialog.Builder(getActivity()).create();
+        dialog.setCanceledOnTouchOutside(true);
+        Button btn_cancel = (Button) mView.findViewById(R.id.btn_cancel_dialog);
+        Button btn_confirm = (Button) mView.findViewById(R.id.btn_confirm_dialog);
+        btn_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                getActivity().finish();
+            }
+        });
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        DisplayMetrics dm = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
+        int x = dm.widthPixels;// 屏幕的宽
+        int y = dm.heightPixels;// 屏幕的高
+        dialog = new Dialog(getActivity(), R.style.dialog_exit);
+        dialog.getWindow().setLayout((int) (x / 2.2), (int) (y / 1.8));
+        dialog.show();
+        dialog.setContentView(mView);
+        dialog.setCancelable(false);
+    }
+
+    /**
+     * 注销操作
+     */
+    private void logout() {
+
+        LayoutInflater layout = LayoutInflater.from(getActivity());
+        View mView = layout.inflate(R.layout.dialog_exit, null);
+        dialog = new AlertDialog.Builder(getActivity()).create();
+        dialog.setCanceledOnTouchOutside(true);
+        ((TextView) mView.findViewById(R.id.tv_title)).setText("确认注销");
+        ((TextView) mView.findViewById(R.id.tv_message)).setText("你确定要注销当前账号么？");
+        Button btn_cancel = (Button) mView.findViewById(R.id.btn_cancel_dialog);
+        Button btn_confirm = (Button) mView.findViewById(R.id.btn_confirm_dialog);
+        btn_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                //清除SharedPereference 中的数据
+                SharedPreferences user_sp = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = user_sp.edit();
+                editor.remove("name");
+                editor.remove("pass");
+                editor.commit();
+                //跳转到登录界面
+                getActivity().startActivity(new Intent(getActivity(), LoginActivity.class));
+                getActivity().finish();
+            }
+        });
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        DisplayMetrics dm = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
+        int x = dm.widthPixels;// 屏幕的宽
+        int y = dm.heightPixels;// 屏幕的高
+        dialog = new Dialog(getActivity(), R.style.dialog_exit);
+        dialog.getWindow().setLayout((int) (x / 2.2), (int) (y / 1.8));
+        dialog.show();
+        dialog.setContentView(mView);
+        dialog.setCancelable(false);
+
+
     }
 }

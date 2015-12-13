@@ -101,7 +101,6 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
                         //清空适配器
                         adapter.removeAll();
                         adapter.addData(news);
-
                         break;
                     case LOAD_CODE:
                         if (news.size() != 0) {

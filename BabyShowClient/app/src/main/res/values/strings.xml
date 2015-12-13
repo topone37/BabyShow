@@ -1,4 +1,6 @@
 <resources>
+    <item name="imgurl_tag" type="id" />
+    <item name="position_tag" type="id" />
     <string name="app_name">宝宝秀</string>
 
     <string name="not_updated_yet">暂未更新过</string>

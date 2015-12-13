@@ -252,10 +252,32 @@
         android:layout_marginTop="20dp"
         android:background="@color/color_line" />
 
+
+    <RelativeLayout
+        android:id="@+id/rl_logout"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#FFF"
+        android:clickable="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="切换账号"
+            android:textColor="#F00" />
+
+
+    </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/rl_exit"
         android:layout_width="match_parent"
         android:layout_height="32dp"
+        android:layout_marginTop="10dp"
         android:background="#FFF"
         android:clickable="true">
 

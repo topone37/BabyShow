@@ -7,6 +7,7 @@ import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.assist.ImageSize;
 import com.tp.bsclient.R;
@@ -28,26 +29,37 @@ public class PreViewActivity extends Activity implements ZoomImageView.IChangePi
     private String[] pname; //图片的名字
     private int currItem;
     private ImageSize imageSize;
+    private TextView tv_show;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preview);
+
         zoomView = (ZoomImageView) findViewById(R.id.zoom_view);
+        tv_show = (TextView) findViewById(R.id.tv_show);
+
         zoomView.setonChangePicListenetr(this);
         /* 通过Intent获取图片的下载地址 */
         pname = getIntent().getStringArrayExtra("pname");
         currItem = getIntent().getIntExtra("curr", 1);
+
+
+        //获取屏幕的宽高
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        imageSize = new ImageSize(widthPixels, heightPixels);
         widthPixels = metrics.widthPixels;
         heightPixels = metrics.heightPixels;
+
+        //制定图片大小 为 屏幕宽高 （按照一定的比例缩放）
+        imageSize = new ImageSize(widthPixels, heightPixels);
         initPic();
 
     }
 
     private void initPic() {
+        //初始化显示控件 3/9
+        tv_show.setText((currItem + 1) + "/" + pname.length);
         if (!pname[currItem].equals("")) {
             Bitmap bitmap = MyApp.imageLoader.loadImageSync(UrlConst.PHOTO_URL + pname[currItem], imageSize, MyApp.options);
             zoomView.setImageBitmap(zoomBitmap(bitmap, widthPixels, heightPixels));
