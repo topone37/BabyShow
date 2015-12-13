@@ -30,7 +30,6 @@ public class AlbumDaoImpl implements AlbumDao {
 
     @Override
     public int insertPhoto(int aid, String imgname) {
-        //INSERT INTO `baby`.`photo` (`pid`, `pname`, `aid`, `pdate`) VALUES ('1', 'a1.png', '1', '2015-12-01');
 
         sql = "insert into photo values(null,?,?,sysdate())";
         if (dbHelper.execOthers(sql, imgname, aid) > 0) {
@@ -110,5 +109,15 @@ public class AlbumDaoImpl implements AlbumDao {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public int updateAlbum(int aid, String name) {
+        System.out.println(">>>>>>>>>updateAlbum");
+        sql = "update album set aname = ? where aid = ?";
+        if (dbHelper.execOthers(sql, name, aid) > 0) {
+            return 1;
+        }
+        return 0;
     }
 }

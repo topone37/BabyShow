@@ -13,4 +13,6 @@ public interface AlbumBiz {
     public String getAll(int uid);  // JsonArray -> 一个个相册
 
     public String getPhotosById(int id); //通过相册id获取对应的图片信息  JsonArray ->一个个 图片
+
+    int renameAlbum(int aid, String aname);//重命名相册
 }

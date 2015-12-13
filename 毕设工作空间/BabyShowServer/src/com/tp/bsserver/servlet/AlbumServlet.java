@@ -35,6 +35,15 @@ public class AlbumServlet extends HttpServlet {
             } else {
                 out.print("0");
             }
+        } else if ("rename".equals(action)) {
+            //删除相册
+            int aid = Integer.valueOf(request.getParameter("aid").trim());
+            String aname = request.getParameter("aname").trim();
+            if (albumBiz.renameAlbum(aid, aname) > 0) {
+                out.print("1");
+            } else {
+                out.print("0");
+            }
         } else if ("del".equals(action)) {
             //删除相册
             int aid = Integer.valueOf(request.getParameter("aid").trim());
@@ -44,7 +53,6 @@ public class AlbumServlet extends HttpServlet {
                 out.print("0");
             }
         } else if ("getAll".equals(action)) {
-            System.out.println("getAll");
             int uid = Integer.valueOf(request.getParameter("uid"));
             System.out.println("uid" + uid);
             //得到所有的相册
@@ -54,7 +62,6 @@ public class AlbumServlet extends HttpServlet {
             int id = Integer.valueOf(request.getParameter("aid"));
             out.print(albumBiz.getPhotosById(id));
         } else if ("addPhoto".equals(action)) {
-            System.out.println(">>>>>>>>>>>addPhotoc ccccccccccccccccccccc");
             // 存储目录
             String path = this.getServletContext().getRealPath("photo");
             File fpath = new File(path);

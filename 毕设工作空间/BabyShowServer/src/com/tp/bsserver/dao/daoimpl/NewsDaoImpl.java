@@ -61,7 +61,7 @@ public class NewsDaoImpl implements NewsDao {
     @Override
     public int delete(int id) {
         sql = "delete from news where nid = ?";
-        return dbHelper.execOthers(sql);
+        return dbHelper.execOthers(sql, id);
     }
 
     @Override

@@ -30,6 +30,7 @@ public class NewsServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         String action = request.getParameter("action");
         NewsBiz newsBiz = new NewsBizImpl();
+
         if ("add".equals(action)) {
             // 存储目录
             String path = this.getServletContext().getRealPath("photo");
@@ -84,6 +85,7 @@ public class NewsServlet extends HttpServlet {
             out.close();
             return;
         } else if ("getAll".equals(action)) {
+
             //当前页
             int currPage = Integer.valueOf(request.getParameter("currPage").trim());
             int uid = Integer.valueOf(request.getParameter("uid").trim());
@@ -93,7 +95,7 @@ public class NewsServlet extends HttpServlet {
             if (news != null) {
                 String rs = GsonUtil.toJson(news, type);
                 out.print(rs);
-                System.out.println("全部动态第一页" + rs);
+                System.out.println(rs);
             } else {
                 out.print("");
             }
@@ -102,6 +104,9 @@ public class NewsServlet extends HttpServlet {
             String id = request.getParameter("id");
             String uid = request.getParameter("uid");
             out.print(newsBiz.getNewsDetailById(Integer.valueOf(id), Integer.valueOf(uid)));
+        } else if ("del".equals(action)) {
+            int nid = Integer.valueOf(request.getParameter("nid").trim());
+            out.print(newsBiz.remove(nid));
         } else if ("zan".equals(action)) {
             int uid = Integer.valueOf(request.getParameter("uid").trim());
             int nid = Integer.valueOf(request.getParameter("nid").trim());

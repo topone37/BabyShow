@@ -34,4 +34,9 @@ public class AlbumBizImpl implements AlbumBiz {
     public String getPhotosById(int id) {
         return albumDao.queryAlbumById(id);
     }
+
+    @Override
+    public int renameAlbum(int aid, String aname) {
+        return albumDao.updateAlbum(aid, aname);
+    }
 }
