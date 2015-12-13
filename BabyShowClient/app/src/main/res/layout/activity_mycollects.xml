@@ -8,11 +8,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_height"
-        android:background="@color/color_title">
+        android:background="@color/title_bar">
 
         <LinearLayout
             android:id="@+id/ll_back_mycol"
-            android:layout_width="@dimen/back_width"
+            android:layout_width="@dimen/iv_back_width"
             android:layout_height="@dimen/edit_height"
             android:layout_centerVertical="true"
             android:background="@drawable/sel_btn_back_style"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="我的收藏"
-            android:textColor="@color/color_title_text"
+            android:textColor="@color/title_textcolor"
             android:textSize="@dimen/title_textsize" />
 
     </RelativeLayout>
@@ -40,7 +40,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/color_line" />
+        android:background="@color/line" />
 
     <ListView
         android:id="@+id/lv_mycol"

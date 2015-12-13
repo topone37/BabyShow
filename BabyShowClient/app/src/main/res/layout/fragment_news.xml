@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_height"
-        android:background="@color/color_title"
+        android:background="@color/title_bar"
         android:orientation="vertical">
 
         <TextView
@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="动态"
-            android:textColor="@color/color_title_text"
+            android:textColor="@color/title_textcolor"
             android:textSize="@dimen/title_textsize" />
 
 

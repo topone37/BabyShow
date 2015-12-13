@@ -7,11 +7,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_height"
-        android:background="@color/color_title">
+        android:background="@color/title_bar">
 
         <LinearLayout
             android:id="@+id/ll_back_conversationlist"
-            android:layout_width="@dimen/back_width"
+            android:layout_width="@dimen/iv_back_width"
             android:layout_height="@dimen/edit_height"
             android:layout_centerVertical="true"
             android:background="@drawable/sel_btn_back_style"
@@ -30,8 +30,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="聊天中"
-            android:textColor="@color/color_title_text"
+            android:text="聊天列表"
+            android:textColor="@color/title_textcolor"
             android:textSize="@dimen/title_textsize" />
 
     </RelativeLayout>

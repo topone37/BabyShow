@@ -3,6 +3,9 @@ package com.tp.bsclient.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -17,9 +20,12 @@ import com.tp.bsclient.R;
 /**
  * Created by Administrator on 2015/11/27.
  */
-public class FeedbackActivity extends Activity implements View.OnClickListener {
+public class FeedbackActivity extends Activity implements View.OnClickListener, TextWatcher {
     private LinearLayout ll_back_feedback;
     private Button btn_commit_feedback;
+    private EditText edit_name;
+    private EditText edit_email;
+    private EditText edit_content;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,8 +40,14 @@ public class FeedbackActivity extends Activity implements View.OnClickListener {
         ll_back_feedback.setOnClickListener(this);
         btn_commit_feedback = (Button) findViewById(R.id.btn_commit_feedback);
         btn_commit_feedback.setOnClickListener(this);
-
+        btn_commit_feedback.setActivated(false);
+        btn_commit_feedback.setClickable(false);
+        edit_name = (EditText) findViewById(R.id.edit_name);
+        edit_email = (EditText) findViewById(R.id.edit_email);
+        edit_content = (EditText) findViewById(R.id.edit_content);
+        edit_content.addTextChangedListener(this);
     }
+
 
     @Override
     public void onClick(View view) {
@@ -97,5 +109,27 @@ public class FeedbackActivity extends Activity implements View.OnClickListener {
             }
         }
         return false;
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        Log.v("tp", "beforeTextChanged >" + s);
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+        Log.v("tp", "onTextChanged >" + s + s.length());
+        if (s.length() > 15) {
+            btn_commit_feedback.setActivated(true);
+            btn_commit_feedback.setClickable(true);
+        } else {
+            btn_commit_feedback.setActivated(false);
+            btn_commit_feedback.setClickable(false);
+        }
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+        Log.v("tp", "afterTextChanged >" + s);
     }
 }

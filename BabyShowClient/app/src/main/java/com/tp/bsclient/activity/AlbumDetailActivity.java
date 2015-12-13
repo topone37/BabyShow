@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,7 +58,7 @@ public class AlbumDetailActivity extends Activity implements AdapterView.OnItemC
     private int aid;
     private ListView lv_photo;
     private JSONArray array;
-    private TextView tv_cancel_p;
+    private LinearLayout ll_back_album;
     private TextView tv_noimg;
     private TextView tv_add_p;
     private Handler handler;
@@ -88,12 +89,12 @@ public class AlbumDetailActivity extends Activity implements AdapterView.OnItemC
 
     private void initView() {
         //初始化试图
-        tv_cancel_p = (TextView) findViewById(R.id.tv_cancel_p);
-        tv_cancel_p.setOnClickListener(this);
+        ll_back_album = (LinearLayout) findViewById(R.id.ll_back_album);
+        ll_back_album.setOnClickListener(this);
         lv_photo = (ListView) findViewById(R.id.gv_photo);
         lv_photo.setOnItemClickListener(this);
         tv_noimg = (TextView) findViewById(R.id.tv_noimg);
-        tv_add_p = (TextView) findViewById(R.id.tv_add_p);
+        tv_add_p = (TextView) findViewById(R.id.tv_add);
         tv_add_p.setOnClickListener(this);
 
         String imgName = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".jpg";
@@ -171,10 +172,10 @@ public class AlbumDetailActivity extends Activity implements AdapterView.OnItemC
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.tv_cancel_p:
+            case R.id.ll_back_album:
                 finish();
                 break;
-            case R.id.tv_add_p:
+            case R.id.tv_add:
                 //添加动态
                 takePhoto();
                 break;

@@ -8,11 +8,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_height"
-        android:background="@color/color_title">
+        android:background="@color/title_bar">
 
         <LinearLayout
             android:id="@+id/ll_back_regist"
-            android:layout_width="@dimen/back_width"
+            android:layout_width="@dimen/iv_back_width"
             android:layout_height="@dimen/edit_height"
             android:layout_centerVertical="true"
 
@@ -37,8 +37,8 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/line_height"
-        android:background="@color/color_line" />
+        android:layout_height="@dimen/line_size"
+        android:background="@color/line" />
 
     <EditText
         android:id="@+id/edit_name"

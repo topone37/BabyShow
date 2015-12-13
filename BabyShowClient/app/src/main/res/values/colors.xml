@@ -7,10 +7,18 @@
     <color name="color_end">#E8C491</color>
     <color name="color_btn_normal">#E77E23</color>
     <color name="color_btn_pressed">#7285A8</color>
-    <color name="color_title">#E73653</color>
-    <color name="color_title_text">#FFFFFF</color>
+
     <color name="color_black">#000000</color>
-    <color name="color_bg">#FFFFFF</color>
-    <color name="color_line">#22000000</color>
+    <color name="color_bg">#11FB1F8B</color>
+
+    <!--线的颜色-->
+    <color name="line">#22000000</color>
+    <!--返回按钮旁边的线的颜色-->
+    <color name="back_line">#F00</color>
+
+    <!--标题栏颜色-->
+    <color name="title_bar">#FC2B6F</color>
+    <!--标题的文本颜色-->
+    <color name="title_textcolor">#FFFFFF</color>
 
 </resources>

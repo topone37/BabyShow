@@ -51,6 +51,6 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/line_height"
-        android:background="@color/color_line" />
+        android:layout_height="@dimen/line_size"
+        android:background="@color/line" />
 </RelativeLayout>
