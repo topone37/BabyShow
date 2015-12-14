@@ -2,19 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/shape_bg_fb"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/color_bg"
         android:orientation="horizontal">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/color_bg"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -92,7 +92,7 @@
                     android:lineSpacingExtra="6dp"
                     android:maxLines="4"
                     android:text="这世上不需要付出就能得到的美好事物毕竟太少，即时是日出都需要牺牲睡眠。想要好身体就得保持锻炼，想要过的好，就得努力，不管你去哪里，愿你不忘初心"
-                    android:textColor="#17201D"
+                    android:textColor="@drawable/sel_textcolor_style"
                     android:textSize="12sp" />
 
                 <LinearLayout
@@ -135,28 +135,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
-                    android:text="来自宝宝秀"
+                    android:text="来自 宝宝秀"
                     android:textSize="8sp" />
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_height="25dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:id="@+id/ll_col"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center">
 
                     <ImageView
                         android:id="@+id/iv_col"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/btn_col" />
 
                     <TextView
@@ -165,20 +170,25 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="0"
-                        android:textColor="@color/color_black"
+                        android:textColor="#77242424"
                         android:textSize="12sp" />
                 </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#f4f4f4" />
 
                 <LinearLayout
                     android:id="@+id/ll_comment"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/btn_comment" />
 
                     <TextView
@@ -187,22 +197,28 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="0"
-                        android:textColor="@color/color_black"
+                        android:textColor="#77242424"
                         android:textSize="12sp" />
 
                 </LinearLayout>
 
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#f4f4f4" />
+
                 <LinearLayout
                     android:id="@+id/ll_zan"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center">
 
                     <ImageView
                         android:id="@+id/iv_zan"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
                         android:src="@drawable/btn_zan" />
 
                     <TextView
@@ -211,7 +227,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="0"
-                        android:textColor="@color/color_black"
+                        android:textColor="#77242424"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -221,8 +237,4 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="6dp"
-        android:background="#0F000000" />
 </LinearLayout>

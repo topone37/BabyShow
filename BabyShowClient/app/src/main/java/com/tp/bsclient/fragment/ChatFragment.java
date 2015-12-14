@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -34,16 +37,31 @@ import io.rong.imkit.RongIM;
 /**
  * Created by Administrator on 2015/11/6.
  */
-public class ChatFragment extends Fragment implements RadioGroup.OnCheckedChangeListener, View.OnClickListener, AdapterView.OnItemClickListener {
+public class ChatFragment extends Fragment implements TextWatcher, RadioGroup.OnCheckedChangeListener, View.OnClickListener, AdapterView.OnItemClickListener, SwipeRefreshLayout.OnRefreshListener {
     private SwipeRefreshLayout sr_chat;
+    private EditText edit_search;
     private ListView lv_chat;
     private JSONArray friends;
     private RadioGroup rg_chat;
     private TextView tv_add_friend;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
+        //初始化页面
+        initView(view);
+        //初始化数据
+        initFriendData();
+
+        return view;
+    }
+
+    private void initView(View view) {
+        this.edit_search = (EditText) view.findViewById(R.id.edit_search);
+        this.edit_search.addTextChangedListener(this);
+        this.sr_chat = (SwipeRefreshLayout) view.findViewById(R.id.sr_chat);
+        this.sr_chat.setOnRefreshListener(this);
         this.lv_chat = (ListView) view.findViewById(R.id.lv_chat);
         this.lv_chat.setOnItemClickListener(this);
         this.tv_add_friend = (TextView) view.findViewById(R.id.tv_add_friend);
@@ -51,19 +69,13 @@ public class ChatFragment extends Fragment implements RadioGroup.OnCheckedChange
         this.rg_chat = (RadioGroup) view.findViewById(R.id.rg_chat);
         ((RadioButton) this.rg_chat.getChildAt(1)).setChecked(true);
         this.rg_chat.setOnCheckedChangeListener(this);
-
-        //初始化数据
-        initFriendData();
-
-        return view;
     }
 
     private void initFriendData() {
         if (MyApp.users == null) {
-            Toast.makeText(getActivity(), "拉取好友信息 >> \n离线状态，请重新登录！", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "你已经处于离线状态，请重新登录！", Toast.LENGTH_SHORT).show();
             return;
         }
-
         //初始化数据
         //访问网络拿到数据
         HttpUtils httpUtils = new HttpUtils();
@@ -73,14 +85,15 @@ public class ChatFragment extends Fragment implements RadioGroup.OnCheckedChange
         httpUtils.send(HttpRequest.HttpMethod.POST, UrlConst.BASE_URL + "FriendsServlet?action=find", params, new RequestCallBack<String>() {
             @Override
             public void onSuccess(ResponseInfo<String> responseInfo) {
+                sr_chat.setRefreshing(false);
                 String result = responseInfo.result;
                 if ("".equals(result.trim())) {
                     Toast.makeText(getActivity(), "你还么有好友，再去添加", Toast.LENGTH_SHORT).show();
                 } else {
                     try {
-                        JSONArray array = new JSONArray(result);
+                        friends = new JSONArray(result);
                         //装载数据到适配器上
-                        FriendListAdapter adapter = new FriendListAdapter(getActivity(), array);
+                        FriendListAdapter adapter = new FriendListAdapter(getActivity(), friends);
                         //设置适配器
                         lv_chat.setAdapter(adapter);
                     } catch (JSONException e) {
@@ -126,5 +139,26 @@ public class ChatFragment extends Fragment implements RadioGroup.OnCheckedChange
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         RongIM.getInstance().startPrivateChat(getActivity(), ((TextView) view.findViewById(R.id.item_uname)).getText().toString(), "聊天");
+    }
+
+    @Override
+    public void onRefresh() {
+        initFriendData();
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+        //文本发生改变了
+        //联网查询数据库
     }
 }

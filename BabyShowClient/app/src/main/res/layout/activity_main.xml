@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#EEE">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_main"
@@ -17,13 +18,12 @@
         android:background="#44000000" />
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="50dp"
+        android:paddingBottom="2dp"
         android:layout_alignParentBottom="true"
-        android:background="#eee"
+        android:background="#F8F8F8"
         android:orientation="horizontal"
         android:paddingTop="5dp">
 
@@ -37,10 +37,19 @@
 
             <ImageView
                 android:id="@+id/iv_home"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/tab_icon_size"
+                android:layout_height="@dimen/tab_icon_size"
                 android:layout_gravity="center"
-                android:src="@drawable/home_press_icon" />
+                android:src="@drawable/tab_home_pressed" />
+
+            <TextView
+                android:id="@+id/tv_tab_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="首页"
+                android:textColor="#65D521"
+                android:textSize="10sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -53,10 +62,18 @@
 
             <ImageView
                 android:id="@+id/iv_news"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/tab_icon_size"
+                android:layout_height="@dimen/tab_icon_size"
                 android:layout_gravity="center"
-                android:src="@drawable/news_icon" />
+                android:src="@drawable/tab_news_normal" />
+
+            <TextView
+                android:id="@+id/tv_tab_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="圈子"
+                android:textSize="10sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -69,10 +86,18 @@
 
             <ImageView
                 android:id="@+id/iv_chat"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/tab_icon_size"
+                android:layout_height="@dimen/tab_icon_size"
                 android:layout_gravity="center"
-                android:src="@drawable/chat_icon" />
+                android:src="@drawable/tab_chat_normal" />
+
+            <TextView
+                android:id="@+id/tv_tab_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="聊天"
+                android:textSize="10sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,10 +110,18 @@
 
             <ImageView
                 android:id="@+id/iv_setting"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/tab_icon_size"
+                android:layout_height="@dimen/tab_icon_size"
                 android:layout_gravity="center"
-                android:src="@drawable/setting_icon" />
+                android:src="@drawable/tab_more_normal" />
+
+            <TextView
+                android:id="@+id/tv_tab_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="更多"
+                android:textSize="10sp" />
         </LinearLayout>
 
 

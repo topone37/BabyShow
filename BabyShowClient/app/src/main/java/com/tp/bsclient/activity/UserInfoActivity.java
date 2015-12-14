@@ -57,6 +57,9 @@ import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import io.rong.imkit.RongIM;
+import io.rong.imlib.model.UserInfo;
+
 /**
  * Created by Administrator on 2015/11/27.
  */
@@ -112,6 +115,11 @@ public class UserInfoActivity extends Activity implements View.OnClickListener, 
                     MyApp.users.setHead(imgNames);//更新当前的用户头像
 
                     civ_head.setImageURI(uri);
+
+                    //刷新用户信息
+                    if (RongIM.getInstance() != null) {
+                        RongIM.getInstance().refreshUserInfoCache(new UserInfo(MyApp.users.getUname(), "千山暮雪", Uri.parse(UrlConst.PHOTO_URL + MyApp.users.getHead())));
+                    }
 
                 } else if (msg.what == 0) {
                     Toast.makeText(UserInfoActivity.this, "上传失败", Toast.LENGTH_SHORT).show();

@@ -27,7 +27,9 @@
     <!--返回图标的宽度  高度 填满父容器-->
     <dimen name="iv_back_width">50dp</dimen>
     <!--返回按钮旁边的线宽-->
-    <dimen name="back_line_size">1dp</dimen>
+    <dimen name="back_line_size">0.5dp</dimen>
+
+    <dimen name="tab_icon_size">30dp</dimen>
 
 
     <dimen name="text_small">8sp</dimen>

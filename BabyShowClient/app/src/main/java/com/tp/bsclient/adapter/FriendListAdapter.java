@@ -1,6 +1,8 @@
 package com.tp.bsclient.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,6 +62,7 @@ public class FriendListAdapter extends BaseAdapter {
             //各种findViewById ..
             holder.uid = (TextView) view.findViewById(R.id.item_uid);
             holder.uname = (TextView) view.findViewById(R.id.item_uname);
+            holder.status = (TextView) view.findViewById(R.id.tv_status);
             holder.head = (CircleImageView) view.findViewById(R.id.item_head);
             holder.nickname = (TextView) view.findViewById(R.id.item_nickname);
             holder.intro = (TextView) view.findViewById(R.id.item_intro);
@@ -72,15 +75,33 @@ public class FriendListAdapter extends BaseAdapter {
             JSONObject object = array.getJSONObject(i);
             holder.uid.setText(object.optString("uid"));
             holder.uname.setText(object.optString("uname"));
+
+
+            String status = object.optString("status");
+            Log.v("tp", "status" + status);
+            if ("1".equals(status)) {
+                holder.status.setText("[在线]");
+                holder.status.setTextColor(Color.parseColor("#00FFFF"));
+            } else {
+                holder.status.setText("[离线]");
+                holder.status.setTextColor(Color.parseColor("#777777"));
+            }
             if (!"".equals(object.optString("head"))) {
                 MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + object.getString("head"), holder.head, MyApp.options);//头像异步加载
             } else {
                 holder.head.setImageResource(R.drawable.defualt_noimg);
             }
 
-
-            holder.nickname.setText(object.optString("nickname"));
-            holder.intro.setText(object.optString("intro"));
+            if ("".equals(object.optString("nickname").trim())) {
+                holder.nickname.setText("无名氏");
+            } else {
+                holder.nickname.setText(object.optString("nickname"));
+            }
+            if ("".equals(object.optString("intro").trim())) {
+                holder.intro.setText("这家伙太懒了,什么也没有留下...");
+            } else {
+                holder.intro.setText(object.optString("intro"));
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -91,6 +112,7 @@ public class FriendListAdapter extends BaseAdapter {
     private static class ViewHolder {
         public TextView uid;
         public TextView uname;
+        public TextView status;
         public CircleImageView head;
         public TextView nickname;
         public TextView intro;

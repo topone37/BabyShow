@@ -8,7 +8,6 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -150,9 +149,6 @@ public class AlbumDetailActivity extends Activity implements AdapterView.OnItemC
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //点击了图片
         try {
-
-//            JSONObject object = array.getJSONObject(position);
-//            String imgName = object.optString("pname");
             String[] imgnames = new String[array.length()];
             //将有所有图片传入
             for (int i = 0; i < array.length(); i++) {
@@ -202,14 +198,12 @@ public class AlbumDetailActivity extends Activity implements AdapterView.OnItemC
             try {
                 if (uri != null) {
                     String path = UriUtil.getRealFilePath(AlbumDetailActivity.this, uri);
-                    Log.v("tp", path);
                     if (file.length() > 0) {
                         new Thread(new SendThread()).start();
                     }
                 }
 
             } catch (Exception e) {
-                Log.v("tp", "exce" + e.toString());
                 e.printStackTrace();
             }
 

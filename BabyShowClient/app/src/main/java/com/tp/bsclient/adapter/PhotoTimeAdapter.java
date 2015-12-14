@@ -23,6 +23,10 @@ public class PhotoTimeAdapter extends BaseAdapter {
     private Context mContext;
     private JSONArray array;
     private int mScreenWidth;
+    private int bg[] = new int[]{R.drawable.shape_pic_style_01, R.drawable.shape_pic_style_02, R.drawable.shape_pic_style_03,
+            R.drawable.shape_pic_style_04, R.drawable.shape_pic_style_05, R.drawable.shape_pic_style_06, R.drawable.shape_pic_style_07};
+
+    private int w = 0;
 
     public PhotoTimeAdapter(Context mContext, JSONArray array) {
         this.mContext = mContext;
@@ -60,7 +64,7 @@ public class PhotoTimeAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.iv_photo = (ImageView) convertView.findViewById(R.id.iv_photo);
             holder.tv_pdate = (TextView) convertView.findViewById(R.id.tv_pdate);
-
+            holder.tv_pweek = (TextView) convertView.findViewById(R.id.tv_pweek);
 
             convertView.setTag(holder);
         } else {
@@ -73,6 +77,9 @@ public class PhotoTimeAdapter extends BaseAdapter {
 
             String padate = object.optString("pdate");
             holder.tv_pdate.setText(padate);
+
+            holder.tv_pweek.setText(convertTime(object.getInt("pweek")));
+            holder.iv_photo.setBackgroundResource(bg[w - 1]);
 
             String pname = object.optString("pname");
             if (!"".equals(pname)) {
@@ -89,9 +96,38 @@ public class PhotoTimeAdapter extends BaseAdapter {
 
     }
 
+    private String convertTime(int i) {
+        switch (i) {
+            case 1:
+                w = 1;
+                return "星期一";
+            case 2:
+                w = 2;
+                return "星期二";
+            case 3:
+                w = 3;
+                return "星期三";
+            case 4:
+                w = 4;
+                return "星期四";
+            case 5:
+                w = 5;
+                return "星期五";
+            case 6:
+                w = 6;
+                return "星期六";
+            case 7:
+                w = 7;
+                return "星期日";
+            default:
+                return "未知";
+        }
+    }
+
     private static class ViewHolder {
         public ImageView iv_photo; //显示图片
         public TextView tv_pdate; //显示图片
+        public TextView tv_pweek; //显示图片
 
     }
 }

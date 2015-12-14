@@ -30,7 +30,7 @@ public class NewsAdapter extends BaseAdapter {
     public NewsAdapter(Context context, List<News> data) {
         this.context = context;
         this.data = data;
-        mScreenWidth = this.context.getResources().getDisplayMetrics().widthPixels - 30;
+        mScreenWidth = this.context.getResources().getDisplayMetrics().widthPixels - 50;
 
     }
 
@@ -132,7 +132,7 @@ public class NewsAdapter extends BaseAdapter {
         }
         ViewGroup.LayoutParams params = holder.img1.getLayoutParams();
         params.width = mScreenWidth / 3;
-        params.height = (int) (mScreenWidth / 3 / 0.9);
+        params.height = (int) (mScreenWidth / 3);
         holder.img1.setLayoutParams(params);
         holder.img2.setLayoutParams(params);
         holder.img3.setLayoutParams(params);

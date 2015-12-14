@@ -388,30 +388,32 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
             RequestParams params = new RequestParams();
             params.addBodyParameter("uid", MyApp.users.getUid() + "");
             params.addBodyParameter("nid", nid);
-            if (!cb_zan.isChecked()) {
-                httpUtils.send(HttpRequest.HttpMethod.POST, UrlConst.BASE_URL + "NewsServlet?action=zan", params, new RequestCallBack<String>() {
-                    @Override
-                    public void onSuccess(ResponseInfo<String> responseInfo) {
-                        if ("1".equals(responseInfo.result)) {
+
+            httpUtils.send(HttpRequest.HttpMethod.POST, UrlConst.BASE_URL + "NewsServlet?action=zan", params, new RequestCallBack<String>() {
+                @Override
+                public void onSuccess(ResponseInfo<String> responseInfo) {
+                    if ("1".equals(responseInfo.result)) {
+                        if (cb_zan.isChecked()) {
+                            cb_zan.setChecked(false);
+                            tv_zannum.setText(Integer.valueOf(tv_zannum.getText().toString()) - 1 + "");
+                        } else {
                             cb_zan.setChecked(true);
                             tv_zannum.setText(Integer.valueOf(tv_zannum.getText().toString()) + 1 + "");
-                            Toast.makeText(NewsDetailActivity.this, "赞成功!", Toast.LENGTH_SHORT).show();
-
-                        } else {
-                            Toast.makeText(NewsDetailActivity.this, "操作失败!", Toast.LENGTH_SHORT).show();
                         }
+
+                    } else {
+                        Toast.makeText(NewsDetailActivity.this, "操作失败!", Toast.LENGTH_SHORT).show();
                     }
 
-                    @Override
-                    public void onFailure(HttpException e, String s) {
-                        Toast.makeText(NewsDetailActivity.this, "网络异常，请稍后重试!", Toast.LENGTH_SHORT).show();
-                    }
-                });
-            } else {
-                //取消
-                Toast.makeText(NewsDetailActivity.this, "已经赞过了，不用再赞了", Toast.LENGTH_SHORT).show();
-                return;
-            }
+
+                }
+
+                @Override
+                public void onFailure(HttpException e, String s) {
+                    Toast.makeText(NewsDetailActivity.this, "网络异常，请稍后重试!", Toast.LENGTH_SHORT).show();
+                }
+            });
+
         } else {
             Toast.makeText(NewsDetailActivity.this, "你已经处于离线状态，请重新登录！", Toast.LENGTH_SHORT).show();
         }

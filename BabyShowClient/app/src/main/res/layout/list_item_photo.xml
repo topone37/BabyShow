@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
+    android:layout_height="400dp"
+    android:background="#FFF"
     android:orientation="horizontal"
-    android:paddingLeft="8dp"
+    android:paddingLeft="16dp"
     android:paddingRight="8dp">
 
 
@@ -13,57 +14,77 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/shape_line_style" />
 
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="5"
+                android:background="@drawable/shape_line_style" />
 
 
-            <com.tp.bsclient.view.CircleImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
-                android:src="@drawable/shape_cir01_style" />
-
-            <TextView
-                android:id="@+id/tv_pdate"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center_horizontal"
-                android:text="6.27"
-                android:textSize="14sp"
-                android:typeface="serif" />
+                android:layout_marginTop="20dp"
+                android:background="#FFF"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_pweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:gravity="center_horizontal"
+                    android:text="6.27"
+                    android:textSize="12sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/tv_pdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:text="星期一"
+                    android:textColor="#00F"
+                    android:textSize="10sp"
+                    android:typeface="serif" />
+            </LinearLayout>
+
         </FrameLayout>
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_weight="5"
-            android:background="@drawable/shape_line_style" />
+
     </LinearLayout>
 
     <FrameLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="20dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
         android:paddingTop="10dp">
 
         <ImageView
             android:id="@+id/iv_photo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_pic_style_01"
+            android:padding="5dp"
             android:scaleType="centerCrop"
             android:src="@drawable/img01" />
+
+
     </FrameLayout>
 
 </LinearLayout>

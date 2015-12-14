@@ -3,7 +3,6 @@ package com.tp.bsclient.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,6 +82,8 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
 
             @Override
             public void onSuccess(ResponseInfo<String> responseInfo) {
+                xlv_news.stopRefresh();
+                xlv_news.stopLoadMore();
                 //每次访问网络拉取数据
                 Type type = new TypeToken<List<News>>() {
                 }.getType();
@@ -115,12 +116,13 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
                 } else {
                     xlv_news.setPullLoadEnable(false);
                 }
-                Log.v("tp", "拉取的数据>>>" + news.size());
             }
 
             @Override
             public void onFailure(HttpException e, String s) {
-                Toast.makeText(getActivity(), "网络异常,请稍后重试!" + s, Toast.LENGTH_SHORT).show();
+                xlv_news.stopRefresh();
+                xlv_news.stopLoadMore();
+                Toast.makeText(getActivity(), "网络异常!" + s, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -160,7 +162,7 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
         currpage = 1;
         flag = REFRESH_CODE;
         getData();
-        xlv_news.stopRefresh();
+
     }
 
     @Override
@@ -168,6 +170,6 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
         currpage++;
         flag = LOAD_CODE;
         getData();
-        xlv_news.stopLoadMore();
+
     }
 }

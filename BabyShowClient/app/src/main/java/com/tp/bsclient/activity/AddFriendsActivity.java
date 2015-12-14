@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.lidroid.xutils.HttpUtils;
@@ -20,16 +22,16 @@ import com.tp.bsclient.R;
 import com.tp.bsclient.application.MyApp;
 import com.tp.bsclient.util.UrlConst;
 
-public class AddFriendsActivity extends Activity implements View.OnClickListener {
+public class AddFriendsActivity extends Activity implements View.OnClickListener, EditText.OnEditorActionListener {
 
     private EditText edti_friendId;
     private Button btn_addFriends;
     private ProgressDialog pd_login;
+    private LinearLayout ll_back_addFriends;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//无标题栏
         setContentView(R.layout.activity_addfriends);
         initView();
     }
@@ -41,6 +43,9 @@ public class AddFriendsActivity extends Activity implements View.OnClickListener
         this.edti_friendId = (EditText) findViewById(R.id.edit_friendid);
         this.btn_addFriends = (Button) findViewById(R.id.btn_add_friends);
         this.btn_addFriends.setOnClickListener(this);
+        this.edti_friendId.setOnEditorActionListener(this);
+        this.ll_back_addFriends = (LinearLayout) findViewById(R.id.ll_back_addFriends);
+        this.ll_back_addFriends.setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +53,9 @@ public class AddFriendsActivity extends Activity implements View.OnClickListener
         switch (view.getId()) {
             case R.id.btn_add_friends:
                 addFriends();
+                break;
+            case R.id.ll_back_addFriends:
+                finish();
                 break;
             default:
                 break;
@@ -96,5 +104,13 @@ public class AddFriendsActivity extends Activity implements View.OnClickListener
 
             }
         });
+    }
+
+    @Override
+    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+        if (actionId == 0 || actionId == 3 && event != null) {
+            Toast.makeText(AddFriendsActivity.this, "搜索好友!", Toast.LENGTH_SHORT).show();
+        }
+        return false;
     }
 }

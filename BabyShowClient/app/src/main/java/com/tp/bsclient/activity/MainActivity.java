@@ -1,15 +1,16 @@
 package com.tp.bsclient.activity;
 
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tp.bsclient.R;
@@ -44,6 +45,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private ImageView iv_news;
     private ImageView iv_chat;
     private ImageView iv_setting;
+    private TextView tv_home;
+    private TextView tv_news;
+    private TextView tv_chat;
+    private TextView tv_more;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -83,7 +88,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             }
         }, true);
         //刷新用户信息
-        // RongIM.getInstance().refreshUserInfoCache(new UserInfo(MyApp.users.getUname(), "千山暮雪", Uri.parse(UrlConst.PHOTO_URL + MyApp.users.getHead())));
+        RongIM.getInstance().refreshUserInfoCache(new UserInfo(MyApp.users.getUname(), MyApp.users.getNickname(), Uri.parse(UrlConst.PHOTO_URL + MyApp.users.getHead())));
         initView();
     }
 
@@ -105,6 +110,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         iv_chat = (ImageView) findViewById(R.id.iv_chat);
         iv_setting = (ImageView) findViewById(R.id.iv_setting);
 
+        tv_home = (TextView) findViewById(R.id.tv_tab_home);
+        tv_news = (TextView) findViewById(R.id.tv_tab_news);
+        tv_chat = (TextView) findViewById(R.id.tv_tab_chat);
+        tv_more = (TextView) findViewById(R.id.tv_tab_more);
+
 
         //准备数据
         this.fragments = new ArrayList<Fragment>();
@@ -125,7 +135,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
             @Override
             public void onPageSelected(int i) {
-                Log.v("tp", "onPageScrollStateChanged" + i);
                 changeSel(i); //下面的导航 同步
             }
 
@@ -140,29 +149,54 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private void changeSel(int position) {
         switch (position % 4) {
             case 0:
-                iv_home.setImageResource(R.drawable.home_press_icon);
-                iv_news.setImageResource(R.drawable.news_icon);
-                iv_chat.setImageResource(R.drawable.chat_icon);
-                iv_setting.setImageResource(R.drawable.setting_icon);
-                break; //选中的是首页
+                //首页
+                iv_home.setImageResource(R.drawable.tab_home_pressed);
+                iv_news.setImageResource(R.drawable.tab_news_normal);
+                iv_chat.setImageResource(R.drawable.tab_chat_normal);
+                iv_setting.setImageResource(R.drawable.tab_more_normal);
+
+                tv_home.setTextColor(Color.parseColor("#65D521"));
+                tv_news.setTextColor(Color.parseColor("#818181"));
+                tv_chat.setTextColor(Color.parseColor("#818181"));
+                tv_more.setTextColor(Color.parseColor("#818181"));
+
+                break;
             case 1:
-                iv_home.setImageResource(R.drawable.home_icon);
-                iv_news.setImageResource(R.drawable.news_press_icon);
-                iv_chat.setImageResource(R.drawable.chat_icon);
-                iv_setting.setImageResource(R.drawable.setting_icon);
+                //动态
+                iv_home.setImageResource(R.drawable.tab_home_normal);
+                iv_news.setImageResource(R.drawable.tab_news_pressed);
+                iv_chat.setImageResource(R.drawable.tab_chat_normal);
+                iv_setting.setImageResource(R.drawable.tab_more_normal);
+
+                tv_home.setTextColor(Color.parseColor("#818181"));
+                tv_news.setTextColor(Color.parseColor("#65D521"));
+                tv_chat.setTextColor(Color.parseColor("#818181"));
+                tv_more.setTextColor(Color.parseColor("#818181"));
                 break; //选中的是首页
             case 2:
-                iv_home.setImageResource(R.drawable.home_icon);
-                iv_news.setImageResource(R.drawable.news_icon);
-                iv_chat.setImageResource(R.drawable.chat_press_icon);
-                iv_setting.setImageResource(R.drawable.setting_icon);
-                break; //选中的是首页
+                //聊天
+                iv_home.setImageResource(R.drawable.tab_home_normal);
+                iv_news.setImageResource(R.drawable.tab_news_normal);
+                iv_chat.setImageResource(R.drawable.tab_chat_pressed);
+                iv_setting.setImageResource(R.drawable.tab_more_normal);
+
+                tv_home.setTextColor(Color.parseColor("#818181"));
+                tv_news.setTextColor(Color.parseColor("#818181"));
+                tv_chat.setTextColor(Color.parseColor("#65D521"));
+                tv_more.setTextColor(Color.parseColor("#818181"));
+                break;
             case 3:
-                iv_home.setImageResource(R.drawable.home_icon);
-                iv_news.setImageResource(R.drawable.news_icon);
-                iv_chat.setImageResource(R.drawable.chat_icon);
-                iv_setting.setImageResource(R.drawable.setting_press_icon);
-                break; //选中的是首页
+                //更多
+                iv_home.setImageResource(R.drawable.tab_home_normal);
+                iv_news.setImageResource(R.drawable.tab_news_normal);
+                iv_chat.setImageResource(R.drawable.tab_chat_normal);
+                iv_setting.setImageResource(R.drawable.tab_more_pressed);
+
+                tv_home.setTextColor(Color.parseColor("#818181"));
+                tv_news.setTextColor(Color.parseColor("#818181"));
+                tv_chat.setTextColor(Color.parseColor("#818181"));
+                tv_more.setTextColor(Color.parseColor("#65D521"));
+                break;
             default:
                 break;
         }
