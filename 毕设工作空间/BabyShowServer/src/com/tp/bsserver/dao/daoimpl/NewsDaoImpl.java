@@ -200,10 +200,25 @@ public class NewsDaoImpl implements NewsDao {
 
     @Override
     public int updateZan(int uid, int nid) {
-        sql = "insert into zan values(null,?,?)";
-        if (dbHelper.execOthers(sql, uid, nid) > 0) {
-            return 1;
+        //判断是否已经收藏
+        sql = "select * from zan where uid = ? and nid = ?";
+        try {
+            if (dbHelper.execQuery(sql, uid, nid).next()) { //收藏过
+                //删除
+                sql = "delete from zan where uid = ? and nid = ?";
+                if (dbHelper.execOthers(sql, uid, nid) > 0) {
+                    return 1;
+                }
+            } else {
+                sql = "insert into zan values(null,?,?)";
+                if (dbHelper.execOthers(sql, uid, nid) > 0) {
+                    return 1;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+
         return 0;
 
     }
@@ -257,6 +272,14 @@ public class NewsDaoImpl implements NewsDao {
                 news.setContent(rs.getString(5));
                 //动态时间
                 news.setDate(ConvertTime.convert(rs.getString(6)));
+                //点赞数 收藏数 评论数
+
+                news.setColNum(getColNum(nid));
+                news.setZanNum(getZanNum(nid));
+                news.setComNum(getComNum(nid));
+
+                news.setZanStatue(getZanStatue(uid, nid));
+                news.setColStatue(getColStatue(uid, nid));
 
                 //获取对应的图片
                 List<String> imgs = new ArrayList<String>(); //图片列表
@@ -308,6 +331,14 @@ public class NewsDaoImpl implements NewsDao {
                     news.setContent(_rs.getString(5));
                     //动态时间
                     news.setDate(ConvertTime.convert(_rs.getString(6)));
+                    //点赞数 收藏数 评论数
+
+                    news.setColNum(getColNum(nid));
+                    news.setZanNum(getZanNum(nid));
+                    news.setComNum(getComNum(nid));
+
+                    news.setZanStatue(getZanStatue(uid, nid));
+                    news.setColStatue(getColStatue(uid, nid));
 
                     //获取对应的图片
                     List<String> imgs = new ArrayList<String>(); //图片列表

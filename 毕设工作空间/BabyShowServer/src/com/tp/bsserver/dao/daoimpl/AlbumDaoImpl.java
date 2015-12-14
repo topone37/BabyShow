@@ -88,7 +88,7 @@ public class AlbumDaoImpl implements AlbumDao {
     @Override
     public String queryAlbumById(int id) {
         //通过相册ID查询所有的相册的图片
-        sql = "select *  from  photo where aid = ? order by pdate desc";
+        sql = "select  pid  ,pname , aid , pdate ,dayofweek(pdate) week from  photo where aid = ? order by pdate desc";
         rs = dbHelper.execQuery(sql, id);
 
         JsonArray array = new JsonArray();
@@ -101,6 +101,7 @@ public class AlbumDaoImpl implements AlbumDao {
                 object.addProperty("pname", rs.getString(2));
                 object.addProperty("aid", rs.getInt(3));
                 object.addProperty("pdate", ConvertTime.formatTime(rs.getString(4)));
+                object.addProperty("pweek", ConvertTime.formatTime(rs.getString(5)));
 
                 array.add(object);
             }

@@ -2,9 +2,14 @@ package com.tp.bsserver.dao.daoimpl;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.tp.bsserver.common.Common;
 import com.tp.bsserver.dao.FriendsDao;
 import com.tp.bsserver.dbutil.DBHelper;
-import com.tp.bsserver.model.Result;
+import com.tp.bsserver.model.FormatType;
+import com.tp.bsserver.model.SdkHttpResult;
+import com.tp.bsserver.model.StatueInfo;
+import com.tp.bsserver.util.ApiHttpClient;
+import com.tp.bsserver.util.GsonUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -33,9 +38,17 @@ public class FriendsDaoImpl implements FriendsDao {
                     object = new JsonObject();
                     object.addProperty("uid", _rs.getInt("uid"));
 
-                    object.addProperty("uname", _rs.getString("uname"));
+                    String uname = _rs.getString("uname");
+                    object.addProperty("uname", uname);
                     //根据用户id (融云中 uid uname 为同一个) 查询用户是否在线
-
+                    SdkHttpResult result = ApiHttpClient.checkOnline(Common.APP_KEY, Common.SECRET, uname, FormatType.json);
+                    StatueInfo statueInfo = (StatueInfo) GsonUtil.fromJson(result.getResult(), StatueInfo.class);
+                    if (statueInfo.getStatus() == 1) {
+                        //在线
+                        object.addProperty("status", "1");
+                    } else {
+                        object.addProperty("status", "0");
+                    }
                     object.addProperty("head", _rs.getString("head"));
                     object.addProperty("nickname", _rs.getString("nickname"));
                     object.addProperty("intro", _rs.getString("intro"));
@@ -44,6 +57,8 @@ public class FriendsDaoImpl implements FriendsDao {
                 array.add(object);
             }
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

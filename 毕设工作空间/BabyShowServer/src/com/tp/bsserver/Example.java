@@ -1,6 +1,11 @@
 package com.tp.bsserver;
 
 
+import com.google.gson.JsonObject;
+import com.tp.bsserver.common.Common;
+import com.tp.bsserver.model.FormatType;
+import com.tp.bsserver.model.SdkHttpResult;
+import com.tp.bsserver.util.ApiHttpClient;
 import com.tp.bsserver.util.ConvertTime;
 
 public class Example {
@@ -10,13 +15,17 @@ public class Example {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-//        String key = "bmdehs6pdlais";
-//        String secret = "oVd5GApLUmOcV1";
+        String key = "bmdehs6pdlais";
+        String secret = "oVd5GApLUmOcV1";
 //
 //        SdkHttpResult result = null;
 //
-////        result = ApiHttpClient.getToken(key, secret, "tp", "tp",
-////                "http://qq.com/a.png", FormatType.json);
+        SdkHttpResult result = null;
+//                ApiHttpClient.getToken(key, secret, "tp", "tp",
+//                "http://qq.com/a.png", FormatType.json);
+        result = ApiHttpClient.checkOnline(Common.APP_KEY, Common.SECRET, "tp", FormatType.json);
+        JsonObject object;
+        System.out.println(result);
 //        List<String> userids = new ArrayList<String>();
 //        userids.add("22");
 //        result = ApiHttpClient.createGroup(key, secret, userids, "tp", "tp", FormatType.json);
