@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_bg"
+    android:background="#FFF"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -46,22 +46,6 @@
         android:layout_height="@dimen/line_size"
         android:background="@color/line" />
 
-    <EditText
-        android:id="@+id/edit_friendid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
-        android:hint="请输入你想要添加的好友帐号" />
-
-    <Button
-        android:id="@+id/btn_add_friends"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginRight="10dp"
-        android:text="添加" />
 
     <LinearLayout
         android:id="@+id/ll_search_bar"
@@ -78,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="32dp"
             android:background="@drawable/cor_search"
-            android:gravity="center_vertical">
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="15dp"
@@ -91,17 +75,30 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:background="#00000000"
                 android:hint="搜索好友"
-                android:imeOptions="actionSearch"
                 android:padding="5dp"
                 android:textColor="#000"
                 android:textCursorDrawable="@null"
                 android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="搜索"
+                android:textColor="#00F"
+                android:textSize="11sp" />
+
         </LinearLayout>
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/lv_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
 
 </LinearLayout>

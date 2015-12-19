@@ -10,7 +10,7 @@
 
     <color name="color_black">#000000</color>
     <color name="color_white">#FFF</color>
-    <color name="color_bg">#22F8A62D</color>
+    <color name="color_bg">#EEE</color>
 
     <!--线的颜色-->
     <color name="line">#22000000</color>

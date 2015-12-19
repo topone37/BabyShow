@@ -4,13 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -37,12 +36,13 @@ import io.rong.imkit.RongIM;
 /**
  * Created by Administrator on 2015/11/6.
  */
-public class ChatFragment extends Fragment implements TextWatcher, RadioGroup.OnCheckedChangeListener, View.OnClickListener, AdapterView.OnItemClickListener, SwipeRefreshLayout.OnRefreshListener {
+public class ChatFragment extends Fragment implements RadioGroup.OnCheckedChangeListener, View.OnClickListener, AdapterView.OnItemClickListener, SwipeRefreshLayout.OnRefreshListener {
     private SwipeRefreshLayout sr_chat;
     private EditText edit_search;
     private ListView lv_chat;
     private JSONArray friends;
     private RadioGroup rg_chat;
+    private LinearLayout ll_search_bar;
     private TextView tv_add_friend;
 
 
@@ -58,8 +58,8 @@ public class ChatFragment extends Fragment implements TextWatcher, RadioGroup.On
     }
 
     private void initView(View view) {
-        this.edit_search = (EditText) view.findViewById(R.id.edit_search);
-        this.edit_search.addTextChangedListener(this);
+        this.ll_search_bar = (LinearLayout) view.findViewById(R.id.ll_search_bar);
+        this.ll_search_bar.setOnClickListener(this);
         this.sr_chat = (SwipeRefreshLayout) view.findViewById(R.id.sr_chat);
         this.sr_chat.setOnRefreshListener(this);
         this.lv_chat = (ListView) view.findViewById(R.id.lv_chat);
@@ -130,6 +130,9 @@ public class ChatFragment extends Fragment implements TextWatcher, RadioGroup.On
             case R.id.tv_add_friend:
                 startActivity(new Intent(getActivity(), AddFriendsActivity.class));
                 break;
+            case R.id.ll_search_bar:
+                startActivity(new Intent(getActivity(), AddFriendsActivity.class));
+                break;
             default:
                 break;
         }
@@ -146,19 +149,4 @@ public class ChatFragment extends Fragment implements TextWatcher, RadioGroup.On
         initFriendData();
     }
 
-    @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-    }
-
-    @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-    }
-
-    @Override
-    public void afterTextChanged(Editable s) {
-        //文本发生改变了
-        //联网查询数据库
-    }
 }

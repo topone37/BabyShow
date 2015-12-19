@@ -25,6 +25,7 @@ public class RegistActivity extends Activity implements View.OnClickListener {
     private LinearLayout ll_back_regist;
     private EditText edit_name;
     private EditText edit_pass;
+    private EditText edit_repass;
     private ProgressDialog pd_login;
 
 
@@ -39,8 +40,9 @@ public class RegistActivity extends Activity implements View.OnClickListener {
     private void initView() {
         ll_back_regist = (LinearLayout) findViewById(R.id.ll_back_regist);
         ll_back_regist.setOnClickListener(this);
-        edit_name = (EditText) findViewById(R.id.edit_name);
-        edit_pass = (EditText) findViewById(R.id.edit_pass);
+        edit_name = (EditText) findViewById(R.id.edit_uname);
+        edit_pass = (EditText) findViewById(R.id.edit_upass);
+        edit_repass = (EditText) findViewById(R.id.edit_reupass);
         // 设置对话框信息
         this.pd_login = new ProgressDialog(this);
         this.pd_login.setMessage("注册中，请稍候...");
@@ -51,6 +53,16 @@ public class RegistActivity extends Activity implements View.OnClickListener {
 
         String username = edit_name.getText().toString().trim();
         String password = edit_pass.getText().toString().trim();
+        String repassword = edit_pass.getText().toString().trim();
+        if ("".equals(password) || "".equals(repassword) || "".equals(username)) {
+            Toast.makeText(RegistActivity.this, "用户名,密码和确认密码不能为空！", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!password.equals(repassword)) {
+            Toast.makeText(RegistActivity.this, "两次密码输入不一致,请重新输入密码！", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
 
         //拿到用户名和密码
         HttpUtils httpUtils = new HttpUtils();

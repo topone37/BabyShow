@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEE"
+    android:background="#FFF"
     android:orientation="vertical"
-    tools:context="com.tp.bsclient.activity.AlbumDetailActivity">
+    tools:context="com.tp.bsclient.activity.AddPhotoActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
 
 
         <LinearLayout
-            android:id="@+id/ll_back_album"
+            android:id="@+id/ll_back_photo"
             android:layout_width="@dimen/iv_back_width"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
@@ -46,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="照片"
+            android:text="添加"
             android:textColor="@color/title_textcolor"
             android:textSize="@dimen/title_textsize" />
 
@@ -57,7 +57,7 @@
             android:background="@color/back_line" />
 
         <TextView
-            android:id="@+id/tv_add"
+            android:id="@+id/tv_add_photo"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
@@ -66,37 +66,27 @@
             android:clickable="true"
             android:gravity="center"
             android:padding="@dimen/iv_back_padding"
-            android:text="添加"
+            android:text="发布"
             android:textColor="@color/title_textcolor"
             android:textSize="@dimen/text_big" />
 
     </RelativeLayout>
 
+    <EditText
+        android:id="@+id/edit_extra"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="记下这一刻...."
+        android:maxLines="4"
+        android:padding="5dp" />
 
-    <FrameLayout
-
+    <ImageView
+        android:id="@+id/iv_photo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="2dp">
+        android:layout_margin="20dp"
+        android:background="@drawable/addpic" />
 
-
-        <ListView
-            android:id="@+id/gv_photo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00ffffff"
-
-            android:divider="#00000000"
-            android:scrollbars="none" />
-
-        <TextView
-            android:id="@+id/tv_noimg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="该相册还没有照片 \n 添加几张吧"
-            android:textSize="14sp"
-            android:visibility="gone" />
-
-    </FrameLayout>
 </LinearLayout>

@@ -42,7 +42,6 @@ public class FeedbackActivity extends Activity implements View.OnClickListener, 
         btn_commit_feedback.setOnClickListener(this);
         btn_commit_feedback.setActivated(false);
         btn_commit_feedback.setClickable(false);
-        edit_name = (EditText) findViewById(R.id.edit_name);
         edit_email = (EditText) findViewById(R.id.edit_email);
         edit_content = (EditText) findViewById(R.id.edit_content);
         edit_content.addTextChangedListener(this);

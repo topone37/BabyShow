@@ -21,6 +21,7 @@ import com.tp.bsclient.fragment.HomeFragment;
 import com.tp.bsclient.fragment.NewsFragment;
 import com.tp.bsclient.fragment.SettingFragment;
 import com.tp.bsclient.util.UrlConst;
+import com.tp.bsclient.view.CubeOutTransformer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -126,6 +127,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         ContentPagerAdapter adapter = new ContentPagerAdapter(getSupportFragmentManager(), fragments);
         //设置适配器
         this.vp_home.setAdapter(adapter);
+
+        //立方体切换效果
+        this.vp_home.setPageTransformer(true, new CubeOutTransformer());
 
         vp_home.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

@@ -66,15 +66,15 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
-            android:src="@drawable/btn_col" />
+            android:src="@drawable/icon_new" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="28dp"
-            android:layout_toRightOf="@id/rc_icon"
-            android:text="我的动态"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/icon_col"
+            android:text="动态"
             android:textColor="@color/color_black" />
 
         <ImageView
@@ -104,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
-            android:src="@drawable/btn_col" />
+            android:src="@drawable/icon_new" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -112,7 +112,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/icon_news"
-            android:text="我的收藏"
+            android:text="收藏"
             android:textColor="@color/color_black" />
 
         <ImageView
@@ -140,11 +140,11 @@
 
         <ImageView
             android:id="@+id/icon_help"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
-            android:src="@drawable/btn_col" />
+            android:src="@drawable/icon_fb" />
 
 
         <TextView
@@ -173,17 +173,17 @@
     <RelativeLayout
         android:id="@+id/rl_about"
         android:layout_width="match_parent"
-        android:layout_height="32dp"
+        android:layout_height="40dp"
         android:background="#FFF"
         android:clickable="true">
 
         <ImageView
             android:id="@+id/icon_about"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
-            android:src="@drawable/btn_col" />
+            android:src="@drawable/icon_about" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -213,7 +213,8 @@
         android:layout_width="match_parent"
         android:layout_height="32dp"
         android:background="#FFF"
-        android:clickable="true">
+        android:clickable="true"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/icon_more"
@@ -257,8 +258,11 @@
         android:id="@+id/rl_logout"
         android:layout_width="match_parent"
         android:layout_height="32dp"
-        android:background="#FFF"
-        android:clickable="true">
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_exit_style"
+        android:clickable="true"
+        android:gravity="center">
 
 
         <TextView
@@ -268,7 +272,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
             android:text="切换账号"
-            android:textColor="#F00" />
+            android:textColor="#FFF" />
 
 
     </RelativeLayout>
@@ -277,9 +281,12 @@
         android:id="@+id/rl_exit"
         android:layout_width="match_parent"
         android:layout_height="32dp"
-        android:layout_marginTop="10dp"
-        android:background="#FFF"
-        android:clickable="true">
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_exit_style"
+        android:clickable="true"
+        android:gravity="center">
 
 
         <TextView
@@ -288,11 +295,13 @@
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
-            android:text="退出登录"
-            android:textColor="#F00" />
+            android:gravity="center"
+            android:text="退出"
+            android:textColor="#FFF" />
 
 
     </RelativeLayout>
+
 
     <View
         android:layout_width="match_parent"

@@ -4,15 +4,14 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
 import com.tp.bsclient.R;
 import com.tp.bsclient.adapter.WelcomePagerAdapter;
 
@@ -64,8 +63,10 @@ public class WelcomeActivity extends Activity {
         //动态加入按钮
         this.btn_start = new Button(this);
         this.btn_start.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        this.btn_start.setBackgroundResource(R.drawable.sel_btn_style);
         this.btn_start.setGravity(Gravity.CENTER);
         this.btn_start.setText("开始进入");
+        this.btn_start.setTextColor(Color.WHITE);
         ll.addView(this.btn_start);
         //最后一页来一个Button跳转
         this.btn_start.setOnClickListener(new View.OnClickListener() {

@@ -83,6 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/rl_search_title"
         android:background="#EEE"
+        android:clickable="true"
         android:paddingBottom="9dp"
         android:paddingLeft="11.5dp"
         android:paddingRight="11.5dp"
@@ -100,7 +101,7 @@
                 android:layout_marginLeft="17dp"
                 android:src="@drawable/search" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_search"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tp.bsclient.R;
@@ -27,6 +28,7 @@ public class PhotoTimeAdapter extends BaseAdapter {
             R.drawable.shape_pic_style_04, R.drawable.shape_pic_style_05, R.drawable.shape_pic_style_06, R.drawable.shape_pic_style_07};
 
     private int w = 0;
+    private String preDate;
 
     public PhotoTimeAdapter(Context mContext, JSONArray array) {
         this.mContext = mContext;
@@ -65,6 +67,9 @@ public class PhotoTimeAdapter extends BaseAdapter {
             holder.iv_photo = (ImageView) convertView.findViewById(R.id.iv_photo);
             holder.tv_pdate = (TextView) convertView.findViewById(R.id.tv_pdate);
             holder.tv_pweek = (TextView) convertView.findViewById(R.id.tv_pweek);
+            holder.tv_pcontent = (TextView) convertView.findViewById(R.id.tv_pcontent);
+            holder.ll_date = (LinearLayout) convertView.findViewById(R.id.ll_date);
+            holder.ll_pic = (LinearLayout) convertView.findViewById(R.id.ll_pic);
 
             convertView.setTag(holder);
         } else {
@@ -72,14 +77,25 @@ public class PhotoTimeAdapter extends BaseAdapter {
         }
         //设置上图片
 
+
         try {
             JSONObject object = array.getJSONObject(position);
 
             String padate = object.optString("pdate");
-            holder.tv_pdate.setText(padate);
 
-            holder.tv_pweek.setText(convertTime(object.getInt("pweek")));
-            holder.iv_photo.setBackgroundResource(bg[w - 1]);
+            if (padate.equals(preDate)) {
+                //如果日期与上一个相同
+                holder.ll_date.setVisibility(View.INVISIBLE);
+                holder.ll_pic.setVisibility(View.INVISIBLE);
+            } else {
+                holder.ll_date.setVisibility(View.VISIBLE);
+                holder.ll_pic.setVisibility(View.VISIBLE);
+                //不一样 就记录下
+                holder.tv_pdate.setText(padate);
+                holder.tv_pweek.setText(convertTime(object.getInt("pweek")));
+                holder.iv_photo.setBackgroundResource(bg[w - 1]);
+            }
+            preDate = padate;
 
             String pname = object.optString("pname");
             if (!"".equals(pname)) {
@@ -87,6 +103,7 @@ public class PhotoTimeAdapter extends BaseAdapter {
             } else {
                 holder.iv_photo.setImageResource(R.drawable.shape_trans_style);
             }
+            holder.tv_pcontent.setText(object.optString("pcontent"));
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -126,8 +143,11 @@ public class PhotoTimeAdapter extends BaseAdapter {
 
     private static class ViewHolder {
         public ImageView iv_photo; //显示图片
-        public TextView tv_pdate; //显示图片
-        public TextView tv_pweek; //显示图片
+        public TextView tv_pdate; //显示日期
+        public TextView tv_pweek; //显示星期几
+        public TextView tv_pcontent; //显示随手笔记
+        public LinearLayout ll_date;//显示时间的
+        public LinearLayout ll_pic;//显示小灰灰
 
     }
 }

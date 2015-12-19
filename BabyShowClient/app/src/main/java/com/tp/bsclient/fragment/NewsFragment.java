@@ -6,6 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,6 +49,7 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
     private int currpage = 1; //当前页
     private NewsAdapter adapter;
     private int flag = INIT_CODE;
+    private Animation animation;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -57,8 +61,11 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
         this.xlv_news.setPullLoadEnable(true);
         this.xlv_news.setPullRefreshEnable(true);
 
+        this.animation = AnimationUtils.loadAnimation(getActivity(), R.anim.list_view);
+        this.xlv_news.setLayoutAnimation(new LayoutAnimationController(this.animation,1));
         this.xlv_news.setXListViewListener(this);//下拉刷新 上拉加载事件
         this.xlv_news.setOnItemClickListener(this);//列表项点击事件
+
 
         /***********初始化*********/
         flag = INIT_CODE;
