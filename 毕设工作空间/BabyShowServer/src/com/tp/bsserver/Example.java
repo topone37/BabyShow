@@ -8,6 +8,9 @@ import com.tp.bsserver.model.SdkHttpResult;
 import com.tp.bsserver.util.ApiHttpClient;
 import com.tp.bsserver.util.ConvertTime;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Example {
 
     /**
@@ -23,13 +26,14 @@ public class Example {
         SdkHttpResult result = null;
 //                ApiHttpClient.getToken(key, secret, "tp", "tp",
 //                "http://qq.com/a.png", FormatType.json);
-        result = ApiHttpClient.checkOnline(Common.APP_KEY, Common.SECRET, "tp", FormatType.json);
-        JsonObject object;
-        System.out.println(result);
-//        List<String> userids = new ArrayList<String>();
-//        userids.add("22");
-//        result = ApiHttpClient.createGroup(key, secret, userids, "tp", "tp", FormatType.json);
-//        System.out.println("token =" + result);
+//        result = ApiHttpClient.checkOnline(Common.APP_KEY, Common.SECRET, "tp", FormatType.json);
+//        JsonObject object;
+//        System.out.println(result);
+        List<String> userids = new ArrayList<String>();
+        userids.add("22");
+        result = ApiHttpClient.createGroup(key, secret, userids, "tp", "tp", FormatType.json);
+        System.out.println("token =" + result);
+
 
 
         String time = "2015-11-23 16:13:51.0";

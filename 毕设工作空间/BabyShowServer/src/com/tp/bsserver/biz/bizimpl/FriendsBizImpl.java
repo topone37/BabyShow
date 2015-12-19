@@ -19,4 +19,9 @@ public class FriendsBizImpl implements FriendsBiz {
     public int addFriends(int id1, int id2) {
         return friendsDao.insert(id1, id2);
     }
+
+    @Override
+    public String findFriendsByKeyWord(String keyword) {
+        return friendsDao.queryByKeyWord(keyword);
+    }
 }

@@ -29,10 +29,10 @@ public class AlbumDaoImpl implements AlbumDao {
     }
 
     @Override
-    public int insertPhoto(int aid, String imgname) {
+    public int insertPhoto(int aid, String imgname, String pcontent) {
 
-        sql = "insert into photo values(null,?,?,sysdate())";
-        if (dbHelper.execOthers(sql, imgname, aid) > 0) {
+        sql = "insert into photo values(null,?,?,sysdate(),?)";
+        if (dbHelper.execOthers(sql, imgname, aid, pcontent) > 0) {
             //插入相册成功
             return 1;
         } else {
@@ -88,7 +88,7 @@ public class AlbumDaoImpl implements AlbumDao {
     @Override
     public String queryAlbumById(int id) {
         //通过相册ID查询所有的相册的图片
-        sql = "select  pid  ,pname , aid , pdate ,dayofweek(pdate) week from  photo where aid = ? order by pdate desc";
+        sql = "select  pid  ,pname , aid , pdate ,dayofweek(pdate) week , pcontent from  photo where aid = ? order by pdate desc";
         rs = dbHelper.execQuery(sql, id);
 
         JsonArray array = new JsonArray();
@@ -102,7 +102,7 @@ public class AlbumDaoImpl implements AlbumDao {
                 object.addProperty("aid", rs.getInt(3));
                 object.addProperty("pdate", ConvertTime.formatTime(rs.getString(4)));
                 object.addProperty("pweek", ConvertTime.formatTime(rs.getString(5)));
-
+                object.addProperty("pcontent", rs.getString(6));
                 array.add(object);
             }
             return array.toString();

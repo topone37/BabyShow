@@ -60,7 +60,7 @@ public class UsersDaoImpl implements UsersDao {
                     null, FormatType.json);
             Result rs = (Result) GsonUtil.fromJson(result.getResult(), Result.class);
             String token = rs.getToken();
-            sql = "insert into users(uname,upass,token,sex,age) values (?,?,?,'男',0)";
+            sql = "insert into users(uname,upass,token,sex,age,nickname,intro,head) values (?,?,?,'男',21,'无名氏','这家伙太懒了,什么也没有留下...', 'a2.png')";
             if (dbHelper.execOthers(sql, username, password, token) > 0) {
                 return 1;
             } else {

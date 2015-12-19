@@ -16,8 +16,8 @@ public class AlbumBizImpl implements AlbumBiz {
     }
 
     @Override
-    public int addPhoto(String imgname, int aid) {
-        return albumDao.insertPhoto(aid, imgname);
+    public int addPhoto(String imgname, int aid, String pcontent) {
+        return albumDao.insertPhoto(aid, imgname, pcontent);
     }
 
     @Override

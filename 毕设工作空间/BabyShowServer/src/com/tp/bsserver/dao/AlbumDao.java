@@ -6,7 +6,7 @@ package com.tp.bsserver.dao;
 public interface AlbumDao {
     public int insertAlbum(String aname, int uid);//添加相册
 
-    public int insertPhoto(int aid, String imgname);//添加照片
+    public int insertPhoto(int aid, String imgname, String pcontent);//添加照片
 
     public int delAlbumById(int aid);//删除相册
 

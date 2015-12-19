@@ -6,7 +6,7 @@ package com.tp.bsserver.biz;
 public interface AlbumBiz {
     public int addAlbum(String aname, int uid);//添加相册
 
-    public int addPhoto(String imgname, int aid);//添加相册
+    public int addPhoto(String imgname, int aid, String pcontent);//添加相册图片
 
     public int removeAlbumById(int aid);//删除相册
 

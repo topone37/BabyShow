@@ -7,4 +7,12 @@ public interface FriendsDao {
     String queryById(int id);
 
     int insert(int id1, int id2);
+
+    //搜索已知好友
+    String queryByKeyWord(String word, int uid);
+
+    //添加好友
+    String queryByKeyWord(String word);
+
+
 }

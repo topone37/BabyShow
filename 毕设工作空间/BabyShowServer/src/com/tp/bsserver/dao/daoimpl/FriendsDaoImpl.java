@@ -102,4 +102,32 @@ public class FriendsDaoImpl implements FriendsDao {
         }
         return -1;
     }
+
+    @Override
+    public String queryByKeyWord(String word, int uid) {
+
+        return "";
+    }
+
+    @Override
+    public String queryByKeyWord(String word) {
+        JsonArray array = new JsonArray();
+        sql = "select * from users where uid like ? or uname like ?  or nickname like ? or intro like ?";
+        rs = dbHelper.execQuery(sql, "%" + word + "%", "%" + word + "%", "%" + word + "%", "%" + word + "%");
+        try {
+            while (rs.next()) {
+                JsonObject object = new JsonObject();
+                object.addProperty("uid", rs.getInt("uid"));
+                object.addProperty("head", rs.getString("head"));
+                object.addProperty("uname", rs.getString("uname"));
+                object.addProperty("nickname", rs.getString("nickname"));
+                object.addProperty("intro", rs.getString("intro"));
+                array.add(object);
+            }
+            return array.toString();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
 }

@@ -42,6 +42,11 @@ public class FriendsServlet extends HttpServlet {
                 out.print("-1");
             }
             return;
+        } else if ("queryByKey".equals(action)) {
+            String keyword = request.getParameter("keyword").trim();
+            System.out.println("查找好友：" + friendsBiz.findFriendsByKeyWord(keyword));
+            out.print(friendsBiz.findFriendsByKeyWord(keyword));
+            return;
         }
     }
 

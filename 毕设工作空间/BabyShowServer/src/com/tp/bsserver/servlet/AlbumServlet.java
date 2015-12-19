@@ -58,9 +58,11 @@ public class AlbumServlet extends HttpServlet {
             //得到所有的相册
             out.print(albumBiz.getAll(uid));
         } else if ("getPhoto".equals(action)) {
-            //通过相册ID得到相册的图片\
+            //通过相册ID得到相册的图片
             int id = Integer.valueOf(request.getParameter("aid"));
+            System.out.println(">>>>>>>>>getPhoto" + id);
             out.print(albumBiz.getPhotosById(id));
+            System.out.println("通过相册ID得到相册的图片" + albumBiz.getPhotosById(id));
         } else if ("addPhoto".equals(action)) {
             // 存储目录
             String path = this.getServletContext().getRealPath("photo");
@@ -85,10 +87,11 @@ public class AlbumServlet extends HttpServlet {
 
                 //上传成功
                 // 插入数据库
-                //获取用户ID
+                //获取相册ID
                 int aid = Integer.parseInt(su.getRequest().getParameter("aid"));
+                String pcontent = su.getRequest().getParameter("pcontent");
                 //获取动态内容
-                if (albumBiz.addPhoto(imgname, aid) > 0) {
+                if (albumBiz.addPhoto(imgname, aid, pcontent) > 0) {
                     //插入数据库成功
                     out.print(1);
                     return;
