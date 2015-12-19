@@ -22,20 +22,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0691c01b-e10e-4b18-b083-4fd5d000b326" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/model/StatueInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/Example.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/Example.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/AlbumBiz.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/AlbumBiz.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/FriendsBiz.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/FriendsBiz.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/bizimpl/FriendsBizImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/biz/bizimpl/FriendsBizImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/AlbumDao.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/AlbumDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/FriendsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/FriendsDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/FriendsDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/FriendsDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/AlbumServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/AlbumServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/FriendsServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/BabyShowServer_war_exploded/WEB-INF/classes/com/tp/bsserver/servlet/FriendsServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/Example.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/Example.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/AlbumBiz.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/AlbumBiz.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/FriendsBiz.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/FriendsBiz.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/bizimpl/FriendsBizImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/biz/bizimpl/FriendsBizImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/AlbumDao.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/AlbumDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/FriendsDao.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/FriendsDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/FriendsDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/FriendsDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/AlbumServlet.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/AlbumServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/FriendsServlet.class" afterPath="$PROJECT_DIR$/out/production/BabyShowServer/com/tp/bsserver/servlet/FriendsServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../baby.sql" afterPath="$PROJECT_DIR$/../baby.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/Example.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/Example.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/AlbumBiz.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/AlbumBiz.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/FriendsBiz.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/FriendsBiz.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/FriendsBizImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/FriendsBizImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/AlbumDao.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/AlbumDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/FriendsDao.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/FriendsDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/FriendsDaoImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/FriendsDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/AlbumServlet.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/AlbumServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/FriendsServlet.java" afterPath="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/FriendsServlet.java" />
     </list>
     <ignored path="毕设工作空间.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,22 +88,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NewsDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.java">
+      <file leaf-file-name="AlbumServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/AlbumServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="226" column="14" selection-start-line="226" selection-start-column="14" selection-end-line="226" selection-end-column="14" />
-              <folding>
-                <element signature="method#insert#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#delete#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#getNewsDetailById#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#updateComment#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#getZanNum#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#getZanStatue#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#getColNum#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#getColStatue#0;class#NewsDaoImpl#0" expanded="false" />
-                <element signature="method#getComNum#0;class#NewsDaoImpl#0" expanded="false" />
-              </folding>
+              <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlbumDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/AlbumDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,21 +111,33 @@
       <file leaf-file-name="AlbumDaoImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79136693">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.39619046">
+              <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.java">
+      <file leaf-file-name="AlbumBiz.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/AlbumBiz.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlbumBizImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
               <folding>
-                <element signature="method#updateHead#0;class#UsersDaoImpl#0" expanded="false" />
-                <element signature="method#updateInfo#0;class#UsersDaoImpl#0" expanded="false" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#880#881#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#1002#1003#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,36 +187,36 @@
         <option value="$PROJECT_DIR$/BabyShow/src/com/tp/bsclient/activity/TestActivity.java" />
         <option value="$PROJECT_DIR$/BabyShow/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/BabyShow/res/layout/activity_regist.xml" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/FriendsDao.java" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/FriendsBizImpl.java" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/FriendsBiz.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/web/index.jsp" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/util/HttpUtil.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/UsersDao.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/UserBizImpl.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/UsersBiz.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/po/Album.java" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/FriendsServlet.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/web/META-INF/context.xml" />
         <option value="$PROJECT_DIR$/BabyShowServer/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dbutil/DBHelper.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/util/ApiHttpClient.java" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/util/ConvertTime.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/vo/News.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/NewsDao.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/NewsBiz.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/NewsBizImpl.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/UserServlet.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/NewsServlet.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/model/StatueInfo.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/FriendsDao.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/FriendsBiz.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/FriendsBizImpl.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/FriendsServlet.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/FriendsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.java" />
+        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/Example.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/AlbumDao.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/AlbumBiz.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/AlbumServlet.java" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/UserServlet.java" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/NewsServlet.java" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/model/StatueInfo.java" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/Example.java" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/FriendsDaoImpl.java" />
-        <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/NewsDaoImpl.java" />
         <option value="$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.java" />
       </list>
     </option>
@@ -539,6 +575,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="毕设工作空间" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -549,7 +596,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -578,26 +624,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="毕设工作空间" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="毕设工作空间" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -606,7 +632,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.36248562" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/大图预览/BigPictureTest" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/note/Cloudnote服务器" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -1283,7 +1309,15 @@
       <workItem from="1449981084171" duration="1324000" />
       <workItem from="1449982869548" duration="108000" />
       <workItem from="1449983030975" duration="10441000" />
-      <workItem from="1450054301775" duration="12048000" />
+      <workItem from="1450054301775" duration="12253000" />
+      <workItem from="1450139793816" duration="5064000" />
+      <workItem from="1450158244940" duration="2593000" />
+      <workItem from="1450179776213" duration="3396000" />
+      <workItem from="1450224919707" duration="83000" />
+      <workItem from="1450353473543" duration="807000" />
+      <workItem from="1450400813732" duration="2778000" />
+      <workItem from="1450438375534" duration="1267000" />
+      <workItem from="1450491882672" duration="3684000" />
     </task>
     <task id="LOCAL-00001" summary="1212">
       <created>1449918450830</created>
@@ -1303,11 +1337,17 @@
       <option name="project" value="LOCAL" />
       <updated>1450102670750</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1214">
+      <created>1450499933066</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1450499933066</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303088000" />
+    <option name="totallyTimeSpent" value="322965000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1319,7 +1359,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1328,13 +1368,13 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32735425" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41255605" sideWeight="0.51495725" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251121" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3249428" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.65358746" sideWeight="0.48504272" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37214363" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37668163" sideWeight="0.48504272" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37107623" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18055555" sideWeight="0.47678018" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18215811" sideWeight="0.47678018" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20459402" sideWeight="0.5232198" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946581" sideWeight="0.49527186" order="1" side_tool="false" content_ui="tabs" />
@@ -1405,7 +1445,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1512,13 +1552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/FriendsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BabyShowServer/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.2">
@@ -1547,13 +1580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/FriendsBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.124528304">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/filter/CharsetFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21132076">
@@ -1579,13 +1605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/FriendsBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48292682">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1652,47 +1671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/AlbumDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50711745">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/AlbumBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64768684">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82206404">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-          <folding>
-            <element signature="e#487#488#0" expanded="false" />
-            <element signature="e#544#545#0" expanded="false" />
-            <element signature="e#920#921#0" expanded="false" />
-            <element signature="e#975#976#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/AlbumServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2935943">
-          <caret line="40" column="54" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/UserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33266532">
-          <caret line="92" column="33" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/NewsBizImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7064057">
@@ -1725,7 +1703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1733,53 +1710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="e#369#370#0" expanded="false" />
-            <element signature="e#396#397#0" expanded="false" />
-            <element signature="e#433#434#0" expanded="false" />
-            <element signature="e#465#466#0" expanded="false" />
-            <element signature="e#495#496#0" expanded="false" />
-            <element signature="e#524#525#0" expanded="false" />
-            <element signature="e#565#566#0" expanded="false" />
-            <element signature="e#601#602#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/Example.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/FriendsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/FriendsDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4163701">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-          <folding>
-            <element signature="method#updateHead#0;class#UsersDaoImpl#0" expanded="false" />
-            <element signature="method#updateInfo#0;class#UsersDaoImpl#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1787,24 +1717,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="226" column="14" selection-start-line="226" selection-start-column="14" selection-end-line="226" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/UserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="114" column="49" selection-start-line="114" selection-start-column="49" selection-end-line="114" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/FriendsBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6214689">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/FriendsBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8757062">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/FriendsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67419964">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/FriendsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/FriendsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="123" column="43" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/UsersDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/Example.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33918127">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/servlet/AlbumServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/AlbumBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/biz/bizimpl/AlbumBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
           <folding>
-            <element signature="method#insert#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#delete#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#getNewsDetailById#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#updateComment#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#getZanNum#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#getZanStatue#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#getColNum#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#getColStatue#0;class#NewsDaoImpl#0" expanded="false" />
-            <element signature="method#getComNum#0;class#NewsDaoImpl#0" expanded="false" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/AlbumDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BabyShowServer/src/com/tp/bsserver/dao/daoimpl/AlbumDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79136693">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.39619046">
+          <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
           <folding />
         </state>
       </provider>

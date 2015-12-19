@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50150
 File Encoding         : 65001
 
-Date: 2015-12-13 19:57:02
+Date: 2015-12-15 21:59:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,7 +24,7 @@ CREATE TABLE `album` (
   `aname` varchar(200) NOT NULL,
   `uid` int(11) DEFAULT NULL,
   PRIMARY KEY (`aid`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of album
@@ -32,11 +32,8 @@ CREATE TABLE `album` (
 INSERT INTO `album` VALUES ('1', '宝宝', '1');
 INSERT INTO `album` VALUES ('3', '二月', '2');
 INSERT INTO `album` VALUES ('4', '三月', '2');
-INSERT INTO `album` VALUES ('6', '222', '1');
 INSERT INTO `album` VALUES ('7', '22', '1');
 INSERT INTO `album` VALUES ('9', '111', '3');
-INSERT INTO `album` VALUES ('10', 'ew2', '1');
-INSERT INTO `album` VALUES ('11', '6666', '1');
 
 -- ----------------------------
 -- Table structure for collect
@@ -47,7 +44,7 @@ CREATE TABLE `collect` (
   `uid` int(11) NOT NULL,
   `nid` int(11) NOT NULL,
   PRIMARY KEY (`colid`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of collect
@@ -56,7 +53,6 @@ INSERT INTO `collect` VALUES ('15', '1', '24');
 INSERT INTO `collect` VALUES ('16', '1', '11');
 INSERT INTO `collect` VALUES ('17', '1', '14');
 INSERT INTO `collect` VALUES ('19', '1', '4');
-INSERT INTO `collect` VALUES ('20', '1', '12');
 INSERT INTO `collect` VALUES ('35', '1', '8');
 INSERT INTO `collect` VALUES ('36', '1', '10');
 INSERT INTO `collect` VALUES ('37', '1', '3');
@@ -81,7 +77,7 @@ CREATE TABLE `comment` (
   KEY `nid` (`nid`),
   CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`nid`) REFERENCES `news` (`nid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of comment
@@ -90,6 +86,19 @@ INSERT INTO `comment` VALUES ('27', '1', '2', 'w34uj', '2015-12-11 20:06:32');
 INSERT INTO `comment` VALUES ('28', '1', '9', '222', '2015-12-12 18:44:06');
 INSERT INTO `comment` VALUES ('29', '1', '9', '22233', '2015-12-12 18:44:08');
 INSERT INTO `comment` VALUES ('30', '1', '9', '12212121', '2015-12-12 19:11:48');
+INSERT INTO `comment` VALUES ('31', '1', '13', '28', '2015-12-15 21:04:59');
+INSERT INTO `comment` VALUES ('32', '1', '12', 'zjzn', '2015-12-15 21:05:20');
+INSERT INTO `comment` VALUES ('33', '1', '12', 'z不错不错', '2015-12-15 21:05:28');
+INSERT INTO `comment` VALUES ('34', '1', '13', '不错哦', '2015-12-15 21:54:03');
+INSERT INTO `comment` VALUES ('35', '1', '13', '的', '2015-12-15 21:54:38');
+INSERT INTO `comment` VALUES ('36', '1', '13', '默', '2015-12-15 21:54:49');
+INSERT INTO `comment` VALUES ('37', '1', '13', '╭(°A°`)╮', '2015-12-15 21:55:06');
+INSERT INTO `comment` VALUES ('38', '1', '12', '的', '2015-12-15 21:55:25');
+INSERT INTO `comment` VALUES ('39', '1', '12', '的额呃呃呃', '2015-12-15 21:55:30');
+INSERT INTO `comment` VALUES ('40', '1', '12', '的额呃呃呃噢噢噢呃呃呃', '2015-12-15 21:55:40');
+INSERT INTO `comment` VALUES ('41', '1', '13', '的', '2015-12-15 21:55:48');
+INSERT INTO `comment` VALUES ('42', '1', '12', '&new', '2015-12-15 21:57:21');
+INSERT INTO `comment` VALUES ('43', '1', '12', '&new(๑•ั็ω•็ั๑)', '2015-12-15 21:57:27');
 
 -- ----------------------------
 -- Table structure for friends
@@ -100,7 +109,7 @@ CREATE TABLE `friends` (
   `uid1` int(11) NOT NULL,
   `uid2` int(11) NOT NULL,
   PRIMARY KEY (`fid`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of friends
@@ -110,6 +119,15 @@ INSERT INTO `friends` VALUES ('5', '1', '1');
 INSERT INTO `friends` VALUES ('6', '2', '2');
 INSERT INTO `friends` VALUES ('7', '3', '2');
 INSERT INTO `friends` VALUES ('8', '3', '1');
+INSERT INTO `friends` VALUES ('9', '6', '1');
+INSERT INTO `friends` VALUES ('10', '6', '2');
+INSERT INTO `friends` VALUES ('11', '6', '3');
+INSERT INTO `friends` VALUES ('12', '6', '4');
+INSERT INTO `friends` VALUES ('13', '6', '5');
+INSERT INTO `friends` VALUES ('14', '6', '6');
+INSERT INTO `friends` VALUES ('15', '4', '1');
+INSERT INTO `friends` VALUES ('16', '7', '1');
+INSERT INTO `friends` VALUES ('17', '5', '1');
 
 -- ----------------------------
 -- Table structure for images
@@ -120,7 +138,7 @@ CREATE TABLE `images` (
   `nid` int(11) NOT NULL,
   `imgname` varchar(255) NOT NULL,
   PRIMARY KEY (`imgid`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of images
@@ -149,6 +167,12 @@ INSERT INTO `images` VALUES ('22', '25', '13416082321171.jpg');
 INSERT INTO `images` VALUES ('23', '10', '13416082321171.jpg');
 INSERT INTO `images` VALUES ('24', '11', '13416082321171.jpg');
 INSERT INTO `images` VALUES ('25', '12', '20151212_032700.jpg');
+INSERT INTO `images` VALUES ('26', '13', 'w4.png');
+INSERT INTO `images` VALUES ('27', '13', 'q3.png');
+INSERT INTO `images` VALUES ('28', '13', 'img1.png');
+INSERT INTO `images` VALUES ('29', '13', 'w2.png');
+INSERT INTO `images` VALUES ('30', '13', 'w5.png');
+INSERT INTO `images` VALUES ('31', '13', 'a5.png');
 
 -- ----------------------------
 -- Table structure for news
@@ -160,7 +184,7 @@ CREATE TABLE `news` (
   `date` datetime DEFAULT NULL COMMENT '动态发布日期',
   `content` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`nid`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of news
@@ -176,6 +200,7 @@ INSERT INTO `news` VALUES ('9', '2', '2015-12-06 00:00:00', '这只是我的测�
 INSERT INTO `news` VALUES ('10', '1', '2015-12-13 19:14:00', '324234');
 INSERT INTO `news` VALUES ('11', '1', '2015-12-13 19:14:14', '');
 INSERT INTO `news` VALUES ('12', '1', '2015-12-13 19:17:50', '223213');
+INSERT INTO `news` VALUES ('13', '1', '2015-12-14 13:35:27', 'this  is my test content !');
 
 -- ----------------------------
 -- Table structure for photo
@@ -221,7 +246,7 @@ CREATE TABLE `users` (
   `intro` varchar(255) DEFAULT NULL,
   `head` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
@@ -229,6 +254,12 @@ CREATE TABLE `users` (
 INSERT INTO `users` VALUES ('1', 'tp', 'tp', '千山墓雪', 'KiN6D+MCaWO48n1rL6Xu7Ii5X5pp+sZPuGWuoLfmG1FVi1AzLuKNhm+uIY3LfEmLx+Hw0MJH0vOK/aq7LW1oBw==', '11', '男', '有多少天真，遗了美好', '13416082321171.jpg');
 INSERT INTO `users` VALUES ('2', 'to', 'to', '兔兔', 'mx7dBncbz8DcXlIAl76MtmAT4+FOjT2hvrgm1G+oklBdyRCGfQwTN5XvF3fpWVt7Y9BSm/RFLGQAdgWi/8DLsw==', '11', '男', '我只分享经典', 'h6.png');
 INSERT INTO `users` VALUES ('3', '11', '11', 'years', 'E5Tuyb1nPznxM//ZzCYiqIt5fjM77iGoU4I5HHb4PuUsGr/Ns1WzZXuf5MR/NFecxU28YXO6zjM=', '0', '男', 'be Best ', 'q1.png');
+INSERT INTO `users` VALUES ('4', '22', '22', '123', 'tyhfMHlmaDK9QbZ0EVVIooi5X5pp+sZPuGWuoLfmG1G4whGtc0SN/WA2iRJPom0gb7lHA04zca2K/aq7LW1oBw==', '0', '男', '123', 'a2.png');
+INSERT INTO `users` VALUES ('5', '33', '33', '123', '68wjGDDsSnEXV6/tr0j8tWJepK9OqL+ijf5na+m+pBU7a+s4GfUiF4bkdI9vAjUm6pIq4C7/pcg=', '0', '男', '123', 'a2.png');
+INSERT INTO `users` VALUES ('6', '44', '44', '123', '7c4siMKfIao7YaY3zqYrlYi5X5pp+sZPuGWuoLfmG1G4whGtc0SN/cz8Ey7MCHulEfRUk2WLmqOK/aq7LW1oBw==', '0', '女', '123', 'a2.png');
+INSERT INTO `users` VALUES ('7', 'qq', 'qq', '无名氏', 'slqI6+yQUl1a3PH8y/4j+oi5X5pp+sZPuGWuoLfmG1G4whGtc0SN/Z01KnMznux8QVteHtugyVmK/aq7LW1oBw==', '21', '男', '这家伙太懒了,什么也没有留下...', 'a2.png');
+INSERT INTO `users` VALUES ('8', '1', '', '无名氏', '4ovBIuNy5OI1v0DidDj/0oi5X5pp+sZPuGWuoLfmG1G4whGtc0SN/dzCBH7Y1FxWBVVwd6XdkECK/aq7LW1oBw==', '21', '男', '这家伙太懒了,什么也没有留下...', 'a2.png');
+INSERT INTO `users` VALUES ('9', '1', '', '无名氏', 'K5/MHOOh3c7hvr+tXQPpwIt5fjM77iGoU4I5HHb4PuVYI7zANMGMbdo7xeg74OPNPZNKU02c69o=', '21', '男', '这家伙太懒了,什么也没有留下...', 'a2.png');
 
 -- ----------------------------
 -- Table structure for zan
@@ -239,7 +270,7 @@ CREATE TABLE `zan` (
   `uid` int(11) NOT NULL,
   `nid` int(11) NOT NULL,
   PRIMARY KEY (`zid`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of zan
@@ -251,7 +282,6 @@ INSERT INTO `zan` VALUES ('4', '1', '18');
 INSERT INTO `zan` VALUES ('5', '1', '10');
 INSERT INTO `zan` VALUES ('6', '1', '16');
 INSERT INTO `zan` VALUES ('7', '1', '19');
-INSERT INTO `zan` VALUES ('8', '1', '13');
 INSERT INTO `zan` VALUES ('9', '1', '17');
 INSERT INTO `zan` VALUES ('10', '1', '15');
 INSERT INTO `zan` VALUES ('11', '1', '14');
@@ -262,7 +292,6 @@ INSERT INTO `zan` VALUES ('15', '1', '11');
 INSERT INTO `zan` VALUES ('16', '1', '24');
 INSERT INTO `zan` VALUES ('17', '1', '24');
 INSERT INTO `zan` VALUES ('18', '1', '4');
-INSERT INTO `zan` VALUES ('19', '1', '12');
 INSERT INTO `zan` VALUES ('20', '1', '25');
 INSERT INTO `zan` VALUES ('21', '1', '8');
 INSERT INTO `zan` VALUES ('22', '1', '2');
@@ -272,3 +301,5 @@ INSERT INTO `zan` VALUES ('25', '1', '9');
 INSERT INTO `zan` VALUES ('26', '1', '7');
 INSERT INTO `zan` VALUES ('27', '1', '3');
 INSERT INTO `zan` VALUES ('28', '1', '1');
+INSERT INTO `zan` VALUES ('29', '1', '5');
+INSERT INTO `zan` VALUES ('30', '1', '12');
