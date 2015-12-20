@@ -1,15 +1,10 @@
 package com.tp.bsserver;
 
 
-import com.google.gson.JsonObject;
-import com.tp.bsserver.common.Common;
-import com.tp.bsserver.model.FormatType;
 import com.tp.bsserver.model.SdkHttpResult;
-import com.tp.bsserver.util.ApiHttpClient;
-import com.tp.bsserver.util.ConvertTime;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Example {
 
@@ -29,11 +24,10 @@ public class Example {
 //        result = ApiHttpClient.checkOnline(Common.APP_KEY, Common.SECRET, "tp", FormatType.json);
 //        JsonObject object;
 //        System.out.println(result);
-        List<String> userids = new ArrayList<String>();
-        userids.add("22");
-        result = ApiHttpClient.createGroup(key, secret, userids, "tp", "tp", FormatType.json);
-        System.out.println("token =" + result);
-
+//        List<String> userids = new ArrayList<String>();
+//        userids.add("22");
+//        result = ApiHttpClient.createGroup(key, secret, userids, "tp", "tp", FormatType.json);
+//        System.out.println("token =" + result);
 
 
         String time = "2015-11-23 16:13:51.0";
@@ -43,6 +37,8 @@ public class Example {
 //        String d = a[2];
 //
 //        System.out.println("  " + y + "\n" + m + "月" + d + "号");
-        System.out.println(ConvertTime.convert(time));
+//        System.out.println(ConvertTime.convert(time));
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(format.format(new Date()));
     }
 }
