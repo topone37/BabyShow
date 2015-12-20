@@ -93,19 +93,31 @@ public class HomeFragment extends Fragment implements OnItemClickListener, GridV
 
         Advertise advertimes = new Advertise();
         advertimes.setId(1 + "");
-        advertimes.setUrl("http://pic05.babytreeimg.com/foto3/thumbs/2015/0703/18/0/1df1bace60365d0f4e611645_mb.png");
+        advertimes.setUrl(UrlConst.PHOTO_URL + "ad_01.png");
         advertimes.setContentUrl("http://www.babytree.com/merchant/group/topic.php?id=42575407&pg=1");
         imgList.add(advertimes);
 
         advertimes = new Advertise();
         advertimes.setId(2 + "");
-        advertimes.setUrl("http://pic21.nipic.com/20120601/4935363_083344321392_2.jpg");
+        advertimes.setUrl(UrlConst.PHOTO_URL + "ad_02.png");
         advertimes.setContentUrl("http://www.babytree.com/merchant/group/topic.php?id=42575407&pg=2");
         imgList.add(advertimes);
 
         advertimes = new Advertise();
         advertimes.setId(3 + "");
-        advertimes.setUrl("http://pic7.nipic.com/20100601/4505234_090758007556_2.jpg");
+        advertimes.setUrl(UrlConst.PHOTO_URL + "ad_03.png");
+        advertimes.setContentUrl("http://bbs.xiaoyeren.com/thread-214511-1-1.html");
+        imgList.add(advertimes);
+
+        advertimes = new Advertise();
+        advertimes.setId(4 + "");
+        advertimes.setUrl(UrlConst.PHOTO_URL + "ad_04.png");
+        advertimes.setContentUrl("http://bbs.xiaoyeren.com/thread-214511-1-1.html");
+        imgList.add(advertimes);
+
+        advertimes = new Advertise();
+        advertimes.setId(5 + "");
+        advertimes.setUrl(UrlConst.PHOTO_URL + "ad_05.png");
         advertimes.setContentUrl("http://bbs.xiaoyeren.com/thread-214511-1-1.html");
         imgList.add(advertimes);
 

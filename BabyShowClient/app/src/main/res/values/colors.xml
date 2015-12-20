@@ -19,7 +19,9 @@
 
     <!--标题栏颜色-->
     <color name="title_bar">#FC2B6F</color>
+    <color name="color_main">#FC2B6F</color>
     <!--标题的文本颜色-->
     <color name="title_textcolor">#FFFFFF</color>
+    <color name="color_green">#5CD142</color>
 
 </resources>

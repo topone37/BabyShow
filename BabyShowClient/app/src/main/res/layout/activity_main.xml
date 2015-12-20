@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="首页"
-                android:textColor="#65D521"
+                android:textColor="#FC2B6F"
                 android:textSize="10sp" />
         </LinearLayout>
 

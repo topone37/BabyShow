@@ -159,7 +159,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 iv_chat.setImageResource(R.drawable.tab_chat_normal);
                 iv_setting.setImageResource(R.drawable.tab_more_normal);
 
-                tv_home.setTextColor(Color.parseColor("#65D521"));
+                tv_home.setTextColor(Color.parseColor("#FC2B6F"));
                 tv_news.setTextColor(Color.parseColor("#818181"));
                 tv_chat.setTextColor(Color.parseColor("#818181"));
                 tv_more.setTextColor(Color.parseColor("#818181"));
@@ -173,7 +173,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 iv_setting.setImageResource(R.drawable.tab_more_normal);
 
                 tv_home.setTextColor(Color.parseColor("#818181"));
-                tv_news.setTextColor(Color.parseColor("#65D521"));
+                tv_news.setTextColor(Color.parseColor("#FC2B6F"));
                 tv_chat.setTextColor(Color.parseColor("#818181"));
                 tv_more.setTextColor(Color.parseColor("#818181"));
                 break; //选中的是首页
@@ -186,7 +186,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
                 tv_home.setTextColor(Color.parseColor("#818181"));
                 tv_news.setTextColor(Color.parseColor("#818181"));
-                tv_chat.setTextColor(Color.parseColor("#65D521"));
+                tv_chat.setTextColor(Color.parseColor("#FC2B6F"));
                 tv_more.setTextColor(Color.parseColor("#818181"));
                 break;
             case 3:
@@ -199,7 +199,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 tv_home.setTextColor(Color.parseColor("#818181"));
                 tv_news.setTextColor(Color.parseColor("#818181"));
                 tv_chat.setTextColor(Color.parseColor("#818181"));
-                tv_more.setTextColor(Color.parseColor("#65D521"));
+                tv_more.setTextColor(Color.parseColor("#FC2B6F"));
                 break;
             default:
                 break;

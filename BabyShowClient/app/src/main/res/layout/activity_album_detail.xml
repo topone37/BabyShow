@@ -1,102 +1,106 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#EEE"
-    android:orientation="vertical"
-    tools:context="com.tp.bsclient.activity.AlbumDetailActivity">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <com.tp.bsclient.view.CloudImageViewPhoto
         android:layout_width="match_parent"
-        android:layout_height="@dimen/title_height"
-        android:background="@drawable/bg_title_bar"
-        android:gravity="center_vertical"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@drawable/bg_title_bar"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/ll_back_album"
-            android:layout_width="@dimen/iv_back_width"
+
+            <LinearLayout
+                android:id="@+id/ll_back_album"
+                android:layout_width="@dimen/iv_back_width"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sel_btn_back_style"
+                android:clickable="true"
+                android:padding="@dimen/iv_back_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/back" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/back_line_size"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/ll_back_album"
+                android:background="@color/back_line" />
+
+            <View
+                android:layout_width="@dimen/back_line_size"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/ll_back_album"
+                android:background="@color/back_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="照片"
+                android:textColor="@color/title_textcolor"
+                android:textSize="@dimen/title_textsize" />
+
+            <View
+                android:layout_width="@dimen/back_line_size"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/tv_add"
+                android:background="@color/back_line" />
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sel_btn_back_style"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="@dimen/iv_back_padding"
+                android:text="添加"
+                android:textColor="@color/title_textcolor"
+                android:textSize="@dimen/text_big" />
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:background="@drawable/sel_btn_back_style"
-            android:clickable="true"
-            android:padding="@dimen/iv_back_padding">
+            android:padding="2dp">
 
-            <ImageView
+
+            <ListView
+                android:id="@+id/gv_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#00000000"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/tv_noimg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/back" />
-        </LinearLayout>
+                android:text="该相册还没有照片 \n 添加几张吧"
+                android:textSize="14sp"
+                android:visibility="gone" />
 
-        <View
-            android:layout_width="@dimen/back_line_size"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/ll_back_album"
-            android:background="@color/back_line" />
-
-        <View
-            android:layout_width="@dimen/back_line_size"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/ll_back_album"
-            android:background="@color/back_line" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="照片"
-            android:textColor="@color/title_textcolor"
-            android:textSize="@dimen/title_textsize" />
-
-        <View
-            android:layout_width="@dimen/back_line_size"
-            android:layout_height="match_parent"
-            android:layout_toLeftOf="@+id/tv_add"
-            android:background="@color/back_line" />
-
-        <TextView
-            android:id="@+id/tv_add"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/sel_btn_back_style"
-            android:clickable="true"
-            android:gravity="center"
-            android:padding="@dimen/iv_back_padding"
-            android:text="添加"
-            android:textColor="@color/title_textcolor"
-            android:textSize="@dimen/text_big" />
-
-    </RelativeLayout>
-
-
-    <FrameLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="2dp">
-
-
-        <ListView
-            android:id="@+id/gv_photo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00ffffff"
-
-            android:divider="#00000000"
-            android:scrollbars="none" />
-
-        <TextView
-            android:id="@+id/tv_noimg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="该相册还没有照片 \n 添加几张吧"
-            android:textSize="14sp"
-            android:visibility="gone" />
-
-    </FrameLayout>
-</LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

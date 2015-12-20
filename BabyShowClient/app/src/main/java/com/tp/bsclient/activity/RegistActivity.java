@@ -53,7 +53,7 @@ public class RegistActivity extends Activity implements View.OnClickListener {
 
         String username = edit_name.getText().toString().trim();
         String password = edit_pass.getText().toString().trim();
-        String repassword = edit_pass.getText().toString().trim();
+        String repassword = edit_repass.getText().toString().trim();
         if ("".equals(password) || "".equals(repassword) || "".equals(username)) {
             Toast.makeText(RegistActivity.this, "用户名,密码和确认密码不能为空！", Toast.LENGTH_SHORT).show();
             return;
