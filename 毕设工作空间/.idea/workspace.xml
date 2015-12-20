@@ -1231,7 +1231,7 @@
       <workItem from="1450583171675" duration="21000" />
       <workItem from="1450595265641" duration="794000" />
       <workItem from="1450596578841" duration="1322000" />
-      <workItem from="1450600379943" duration="2660000" />
+      <workItem from="1450600379943" duration="2678000" />
     </task>
     <task id="LOCAL-00001" summary="1212">
       <created>1449918450830</created>
@@ -1263,11 +1263,17 @@
       <option name="project" value="LOCAL" />
       <updated>1450499977740</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1220">
+      <created>1450617538223</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1450617538223</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328427000" />
+    <option name="totallyTimeSpent" value="328445000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1291,7 +1297,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3249428" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37668163" sideWeight="0.48504272" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37668163" sideWeight="0.48504272" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37107623" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18215811" sideWeight="0.47678018" order="0" side_tool="false" content_ui="combo" />
@@ -1361,7 +1367,8 @@
     <MESSAGE value="1212" />
     <MESSAGE value="1213" />
     <MESSAGE value="1214" />
-    <option name="LAST_COMMIT_MESSAGE" value="1214" />
+    <MESSAGE value="1220" />
+    <option name="LAST_COMMIT_MESSAGE" value="1220" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
