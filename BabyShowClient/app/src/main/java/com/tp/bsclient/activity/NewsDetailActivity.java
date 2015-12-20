@@ -179,6 +179,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                         picNum++;
 
                     } else {
+                        img[0].setTag(R.id.imgurl_tag, "");
                         img[0].setTag(R.id.position_tag, -1);
                         img[0].setImageResource(R.drawable.shape_trans_style);
                         img[0].setVisibility(View.GONE);
@@ -192,6 +193,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                         img[1].setOnClickListener(new ImgOCL());
                         picNum++;
                     } else {
+                        img[1].setTag(R.id.imgurl_tag, "");
                         img[1].setTag(R.id.position_tag, -1);
                         img[1].setImageResource(R.drawable.shape_trans_style);
                         img[1].setVisibility(View.GONE);
@@ -204,6 +206,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                         img[2].setOnClickListener(new ImgOCL());
                         picNum++;
                     } else {
+                        img[2].setTag(R.id.imgurl_tag, "");
                         img[2].setTag(R.id.position_tag, -1);
                         Log.v("tp", "img3没有");
                         img[2].setImageResource(R.drawable.shape_trans_style);
@@ -217,6 +220,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                         img[3].setOnClickListener(new ImgOCL());
                         picNum++;
                     } else {
+                        img[3].setTag(R.id.imgurl_tag, "");
                         img[3].setTag(R.id.position_tag, -1);
                         Log.v("tp", "img4没有");
                         img[3].setImageResource(R.drawable.shape_trans_style);
@@ -230,6 +234,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                         img[4].setOnClickListener(new ImgOCL());
                         picNum++;
                     } else {
+                        img[4].setTag(R.id.imgurl_tag, "");
                         img[4].setTag(R.id.position_tag, -1);
                         Log.v("tp", "img5没有");
                         img[4].setImageResource(R.drawable.shape_trans_style);
@@ -243,6 +248,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                         img[5].setOnClickListener(new ImgOCL());
                         picNum++;
                     } else {
+                        img[5].setTag(R.id.imgurl_tag, "");
                         img[5].setTag(R.id.position_tag, -1);
                         Log.v("tp", "img6没有");
                         img[5].setImageResource(R.drawable.shape_trans_style);
@@ -254,9 +260,15 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                     //拿到所有图片的对应Url
                     urls = new String[picNum];
                     //遍历ImageView数组
-                    for (int i = 0; i < picNum; i++) {
+                    //*******************************************************************
+                    for (int i = 0; i < picNum - 2; i++) {
                         //证明有图片
-                        urls[i] = (String) img[i].getTag(R.id.imgurl_tag);
+                        Log.e("tp", ">>>>>>>>>>>>>>>>>>>>>>>i=" + i);
+                        String s = urls[i];
+                        if (img[i].getTag(R.id.imgurl_tag) != null && "".equals(img[i].getTag(R.id.imgurl_tag))) {
+                            urls[i] = (String) img[i].getTag(R.id.imgurl_tag);
+                        }
+
                     }
                     JSONArray com_array = object.getJSONArray("com_array"); //得到相关评论的数据
 

@@ -3,6 +3,7 @@ package com.tp.bsclient.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,12 +28,15 @@ import com.tp.bsclient.adapter.NewsAdapter;
 import com.tp.bsclient.application.MyApp;
 import com.tp.bsclient.util.GsonUtil;
 import com.tp.bsclient.util.UrlConst;
+import com.tp.bsclient.view.CircleImageView;
 import com.tp.bsclient.view.XListView;
 import com.tp.bsclient.view.XListView.IXListViewListener;
 import com.tp.bsclient.vo.News;
 
 import java.lang.reflect.Type;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -50,6 +54,8 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
     private NewsAdapter adapter;
     private int flag = INIT_CODE;
     private Animation animation;
+    private TextView tv_nickname;
+    private CircleImageView civ_head;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -62,16 +68,31 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
         this.xlv_news.setPullRefreshEnable(true);
 
         this.animation = AnimationUtils.loadAnimation(getActivity(), R.anim.list_view);
-        this.xlv_news.setLayoutAnimation(new LayoutAnimationController(this.animation,1));
+        this.xlv_news.setLayoutAnimation(new LayoutAnimationController(this.animation, 1));
         this.xlv_news.setXListViewListener(this);//下拉刷新 上拉加载事件
         this.xlv_news.setOnItemClickListener(this);//列表项点击事件
 
+
+        View head = inflater.inflate(R.layout.news_head_layout, null);
+        tv_nickname = (TextView) head.findViewById(R.id.tv_nickname);
+
+        civ_head = (CircleImageView) head.findViewById(R.id.civ_head_news);
+        if (MyApp.users != null) {
+            tv_nickname.setText(MyApp.users.getNickname());
+            if (!MyApp.users.getHead().equals("")) {
+                Log.e("tp", UrlConst.PHOTO_URL + MyApp.users.getHead());
+                MyApp.imageLoader.displayImage(UrlConst.PHOTO_URL + MyApp.users.getHead(), civ_head, MyApp.options);
+            }
+        }
+        xlv_news.addHeaderView(head);
 
         /***********初始化*********/
         flag = INIT_CODE;
         currpage = 1;
         getData();
         //初始状态 拉取第一页数据
+
+
         return this.view;
 
     }
@@ -166,6 +187,8 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
 
     @Override
     public void onRefresh() {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        xlv_news.setRefreshTime(format.format(new Date()));
         currpage = 1;
         flag = REFRESH_CODE;
         getData();

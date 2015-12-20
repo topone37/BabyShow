@@ -89,7 +89,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             }
         }, true);
         //刷新用户信息
-        RongIM.getInstance().refreshUserInfoCache(new UserInfo(MyApp.users.getUname(), MyApp.users.getNickname(), Uri.parse(UrlConst.PHOTO_URL + MyApp.users.getHead())));
         initView();
     }
 

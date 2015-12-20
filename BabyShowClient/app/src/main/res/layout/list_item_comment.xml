@@ -28,7 +28,6 @@
                 android:id="@+id/cnickname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:text="昵称"
                 android:textSize="10sp" />
         </LinearLayout>
@@ -48,7 +47,7 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="2015-11-23"
-                android:textColor="#000"
+                android:textColor="#777"
                 android:textSize="10sp" />
 
             <TextView
@@ -57,11 +56,12 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:maxLines="3"
-                android:text="评论内容..."
+                android:gravity="top"
+                android:maxLines="2"
+                android:paddingRight="40dp"
+                android:text="不错不错哦不错不错哦不错不错哦不错不错哦不错不错哦不错不错哦不错不错哦不错不错哦不错不错哦"
                 android:textColor="#99000000"
-                android:textSize="12sp"
-                android:typeface="monospace" />
+                android:textSize="10sp" />
         </LinearLayout>
 
     </LinearLayout>

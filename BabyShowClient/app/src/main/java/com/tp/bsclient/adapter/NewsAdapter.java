@@ -41,7 +41,6 @@ public class NewsAdapter extends BaseAdapter {
     }
 
     public void addData(List<News> list) {
-        Log.v("tp", "加上数据到适配器");
         for (int i = 0; i < list.size(); i++) {
             data.add(list.get(i));//将数据一个个加到原始数据的后头
         }

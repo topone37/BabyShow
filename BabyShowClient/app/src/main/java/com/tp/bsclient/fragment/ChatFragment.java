@@ -27,6 +27,7 @@ import com.tp.bsclient.activity.AddFriendsActivity;
 import com.tp.bsclient.adapter.FriendListAdapter;
 import com.tp.bsclient.application.MyApp;
 import com.tp.bsclient.util.UrlConst;
+import com.tp.bsclient.view.CircleImageView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,11 +47,13 @@ public class ChatFragment extends Fragment implements RadioGroup.OnCheckedChange
     private TextView tv_add_friend;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
         //初始化页面
         initView(view);
+
         //初始化数据
         initFriendData();
 
@@ -64,6 +67,7 @@ public class ChatFragment extends Fragment implements RadioGroup.OnCheckedChange
         this.sr_chat.setOnRefreshListener(this);
         this.lv_chat = (ListView) view.findViewById(R.id.lv_chat);
         this.lv_chat.setOnItemClickListener(this);
+
         this.tv_add_friend = (TextView) view.findViewById(R.id.tv_add_friend);
         this.tv_add_friend.setOnClickListener(this);
         this.rg_chat = (RadioGroup) view.findViewById(R.id.rg_chat);

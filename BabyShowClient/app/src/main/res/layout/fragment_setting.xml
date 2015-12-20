@@ -44,7 +44,7 @@
             android:layout_marginTop="8dp"
             android:text="千山暮雪兔"
             android:textColor="@color/color_black"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <View
