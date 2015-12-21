@@ -167,6 +167,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                         cb_col.setChecked(false);
                     }
 
+                    picNum = 0; //图片数量
                     //图片  ( 三张 )
                     JSONObject _object = object.getJSONObject("img");
                     if (!"".equals(_object.optString("img1"))) {
